@@ -1,0 +1,12 @@
+type: object
+properties:
+  context:
+    $ref: '../schema/Context.yaml'
+  message:
+    type: object
+    properties:
+      intent:
+        $ref: '../schema/Intent.yaml'
+required:
+  - context
+  - message
