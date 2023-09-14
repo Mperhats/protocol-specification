@@ -13,14 +13,39 @@ paths:
         content:
           application/json:
             schema:
-              $ref : './io/Search.yaml'
+              $ref: './io/Search.yaml'
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+            minimum: 1
+          description: The page number for pagination (optional)
+        - in: query
+          name: perPage
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+          description: The number of items per page (optional)
       responses:
         '200':
-          description: A catalog of providers represented by the Seller Supporting Node (SSN)
+          description: A catalog of merchants represented by the Seller Supporting Node (SSN)
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Spacecraft'
+                type: object
+                properties:
+                  data:
+                    type: array
+                    description: an array of merchants from the Seller Supporting Node (SSN)
+                    items:
+                      $ref: './schema/merchant/Merchant.yaml'
+                  pagination:
+                    $ref: './Pagination.yaml'
+                required:
+                  - data
+                  - pagination
         404:
           description: No data found for the provided value
           content:
@@ -33,5 +58,13 @@ paths:
             application/json:
               schema:
                 $ref: './Error.yaml'
+
+components:
+  securitySchemes:
+    NodeAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Signature of message body using BSN or SSN signing public key as defined in the registry. <br/><br/>Format:<br/><br/><code>Authorization: Signature keyId="{subscriber_id}|{unique_key_id}|{algorithm}",algorithm="ed25519",created="1606970629",expires="1607030629",headers="(created) (expires) digest",signature="Base64(signing string)"</code>'
 security:
-  - ApiKey: []
+  - NodeAuth: []

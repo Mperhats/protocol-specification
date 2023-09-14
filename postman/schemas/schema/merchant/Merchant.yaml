@@ -1,0 +1,58 @@
+title: Merchant
+type: object
+description: The requested Merchant based on the buyers serch intent
+properties:
+  id:
+    type: string
+    description: The unique ID of the merchant in the Seller Supporting Node's (SSN) system
+  slug: 
+    type: string
+    description: A unique, human readable identifier of the merchant. 
+  ethereum_address:
+    type: string
+    description: Ethereum address
+    format: Ethereum address
+    maxLength: 255
+  merchant_name:
+    type: string
+    description: The public facing display name of the merchant.
+  description: 
+    type: string
+    description: A public facing description of the business to display to the buyer.
+  country:
+    type: string
+    description: The country code associated with the merchant, in the two-letter format of ISO 3166. For example, US or JP.
+    enum:
+      - US
+  language_code:
+    type: string
+    description: The code indicating the language preferences of the merchant, in BCP 47 format. For example, en-US or fr-CA.
+    enum: 
+      - EN
+  currency:
+    type: string
+    description: The currency associated with the merchant, in ISO 4217 format. For example, the currency code for US dollars is USD.
+    enum: 
+      - USD
+  status:
+    type: string
+    description: The merchant's status
+    enum: 
+      - ACTIVE
+      - INACTIVE
+  main_location:
+    type: string
+    description: the location of the business
+    $ref: '../shared/Coordinate.yaml'
+  operational_status: 
+    type: string
+    enum: 
+      - OPEN
+      - CLOSED
+      - CLOSING_SOON #when business is open for less than 60 more minutes
+  cell_phone: 
+    description: A publicly listed cell phone number for the merchant.
+    $ref: '../shared/CellPhone.yaml'
+    
+  
+  

@@ -1,3 +1,4 @@
+title: Dispatch Search Intent
 description: Represents a buyers intent to dispatch a good or service between locations
 type: object
 properties:

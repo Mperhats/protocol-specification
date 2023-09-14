@@ -1,3 +1,4 @@
+title: Error
 type: object
 required:
   - message

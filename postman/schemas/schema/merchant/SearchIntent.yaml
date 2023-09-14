@@ -1,3 +1,4 @@
+title: Merchant Search Intent
 description: Represents a buyers intent to purchase a product or a service from a merchant.
 type: object
 properties:
