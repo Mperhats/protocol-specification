@@ -1,0 +1,7 @@
+title: Cancelation Term
+description: Defines
+type: object
+properties:
+    id:
+        description: an identifier
+        type: string

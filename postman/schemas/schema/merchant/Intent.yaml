@@ -3,7 +3,7 @@ description: Represents a buyers intent to purchase a product or a service from 
 type: object
 properties:
   search_string:
-    description: A raw free text search string describing the name of a seller.
+    description: A raw free text search string describing the name or description of a seller.
     type: string
   location:
     description: The location where the transaction is to be fulfilled. Typically, the location of the customer. Used by the Seller Supporting Node (SSN) to filter providers.

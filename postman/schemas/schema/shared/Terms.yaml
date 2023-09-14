@@ -1,0 +1,14 @@
+title: Terms
+description: Transactional terms as defined by the Seller Supporting Node (SSN)
+type: object
+properties:
+    payment_terms: 
+        $ref: './terms/PaymentTerm.yaml'
+    expiration_date: 
+        type: integer
+        format: int64
+        minimum: -1
+        description: Unix timestamp in seconds representing when these terms expire. A value of -1 suggests that this response is not cacheable and should only be used once. 
+required:
+    - payment_terms
+    - expiration_date

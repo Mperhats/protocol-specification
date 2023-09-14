@@ -1,17 +1,17 @@
 description: This object must be passed in every interaction between a Seller Supporting Node (SSN) and a Buyer Supporting Node (BSN). Provides an overview to a receiving node with information about the intended transaction. Typically, a Buyer Supporting Node (BSN) sets the context based on the consumers location and search. Context includes - <ol><li>Demographic information like `industry` and `location`.</li><li>Communication details like the sending and receiving Node ID's and API URL.</li><li>Interoperability information like the protocol version</li><li>Transaction details like the receiving Nodes call method, the transaction_id of a Buyer Supporting Node (BSN) session, a `time to live`, and a `timestamp`</li></ol> 
 type: object
 properties:
-  bsn_id:
-    description: Node ID of the Buyer Supporting Node (BSN)
+  node_id:
+    description: Node ID of the requesting node
     type: string
-  bsn_uri:
-    description: Node Host URI of the Buyer Supporting Node (BSN) for accepting callbacks / webhooks from Seller Supporting Node (SSN)s.
+  node_uri:
+    description: Node Host URI of the requesting node
     type: string
     format: uri
   timestamp:
     type: integer
     format: int64
     description: Unix timestamp in seconds
-  sender_public_key:
-    description: The encryption public key of the buyer supporting node as defined in the registry.
+  requester_public_key:
+    description: The encryption public key of the requesting node as defined in the registry.
     $ref: './Node.yaml#/properties/public_key'

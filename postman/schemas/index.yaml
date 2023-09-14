@@ -4,7 +4,7 @@ info:
   description: Transaction API specification for primary UTP commerce definitions
   version: 0.0.0
 paths:
-  /find_merchants:
+  /search:
     post:
       tags:
         - Seller Supporting Node (SSN)
@@ -13,7 +13,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: './io/Search.yaml'
+              $ref: './io/MerchantSearch.yaml'
       parameters:
         - in: query
           name: page
@@ -42,23 +42,102 @@ paths:
                     items:
                       $ref: './schema/merchant/Merchant.yaml'
                   pagination:
-                    $ref: './Pagination.yaml'
-                required:
-                  - data
-                  - pagination
+                    $ref: './schema/shared/Pagination.yaml'
+                  terms: 
+                    $ref: './schema/shared/Terms.yaml'
         404:
           description: No data found for the provided value
           content:
             application/json:
               schema:
-                $ref: './Error.yaml'
+                $ref: './schema/shared/Error.yaml'
         500:
           description: Unexpected error
           content:
             application/json:
               schema:
-                $ref: './Error.yaml'
-
+                $ref: './schema/shared/Error.yaml'
+  /search/{merchant_id}:
+      parameters:
+        - name: merchant_id
+          description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
+            <ul>
+              <li>merchant_id</li>
+              <li>ethereum_address</li>
+              <li>slug</li>
+            </ul>
+          in: path
+          required: true
+          schema:
+            $ref: './schema/merchant/Merchant.yaml#/properties/merchant_id'
+      get:
+        summary: Find information about a specific merchant
+        responses:
+          '200':
+            description: A single merchants represented by the Seller Supporting Node (SSN)
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    data:
+                      $ref: './schema/merchant/Merchant.yaml'
+                    terms: 
+                      $ref: './schema/shared/Terms.yaml'
+          404:
+            description: No data found for the provided value
+            content:
+              application/json:
+                schema:
+                  $ref: './schema/shared/Error.yaml'
+          500:
+            description: Unexpected error
+            content:
+              application/json:
+                schema:
+                  $ref: './schema/shared/Error.yaml'
+  /search/{merchant_id}/menu:
+    parameters:
+      - name: merchant_id
+        description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
+          <ul>
+            <li>merchant_id</li>
+            <li>ethereum_address</li>
+            <li>slug</li>
+          </ul>
+        in: path
+        required: true
+        schema:
+          oneOf:
+            - $ref: './schema/merchant/Merchant.yaml#/properties/ethereum_address'
+            - $ref: './schema/merchant/Merchant.yaml#/properties/slug' 
+            - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_id'
+    get:
+      summary: Retrieves information about the merchants catalog, available items, and the affiliated prices to display to a customer of a Buyer Supporting Node (BSN)
+      responses:
+        '200':
+          description: A single merchants represented by the Seller Supporting Node (SSN)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: './schema/merchant/Merchant.yaml'
+                  terms: 
+                    $ref: './schema/shared/Terms.yaml'
+        404:
+          description: No data found for the provided value
+          content:
+            application/json:
+              schema:
+                $ref: './schema/shared/Error.yaml'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: './schema/shared/Error.yaml'
 components:
   securitySchemes:
     NodeAuth:

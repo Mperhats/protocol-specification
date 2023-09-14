@@ -14,19 +14,25 @@ rootDirectory = postman/collections
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
-files[] = {"path":"Error.yaml","metaData":{}}
 files[] = {"path":"index.yaml","metaData":{}}
-files[] = {"path":"io/Search.yaml","metaData":{}}
-files[] = {"path":"Pagination.yaml","metaData":{}}
+files[] = {"path":"io/MerchantSearch.yaml","metaData":{}}
 files[] = {"path":"schema/dispatch/SearchIntent.yaml","metaData":{}}
+files[] = {"path":"schema/merchant/Intent.yaml","metaData":{}}
+files[] = {"path":"schema/merchant/Menu.yaml","metaData":{}}
 files[] = {"path":"schema/merchant/Merchant.yaml","metaData":{}}
-files[] = {"path":"schema/merchant/SearchIntent.yaml","metaData":{}}
 files[] = {"path":"schema/registry/Search.yaml","metaData":{}}
 files[] = {"path":"schema/shared/CellPhone.yaml","metaData":{}}
 files[] = {"path":"schema/shared/Context.yaml","metaData":{}}
 files[] = {"path":"schema/shared/Coordinate.yaml","metaData":{}}
+files[] = {"path":"schema/shared/Error.yaml","metaData":{}}
 files[] = {"path":"schema/shared/Node.yaml","metaData":{}}
+files[] = {"path":"schema/shared/Pagination.yaml","metaData":{}}
 files[] = {"path":"schema/shared/ProviderType.yaml","metaData":{}}
+files[] = {"path":"schema/shared/Terms.yaml","metaData":{}}
+files[] = {"path":"schema/shared/terms/CancelationTerm.yaml","metaData":{}}
+files[] = {"path":"schema/shared/terms/FulfillmentTerm.yaml","metaData":{}}
+files[] = {"path":"schema/shared/terms/PaymentTerm.yaml","metaData":{}}
+files[] = {"path":"schema/shared/terms/RefundTerm.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 rootFiles[] = index.yaml

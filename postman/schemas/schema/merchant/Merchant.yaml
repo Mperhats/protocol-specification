@@ -2,13 +2,17 @@ title: Merchant
 type: object
 description: The requested Merchant based on the buyers serch intent
 properties:
-  id:
+  merchant_id:
     type: string
     description: The unique ID of the merchant in the Seller Supporting Node's (SSN) system
-  slug: 
+  merchant_slug:
     type: string
-    description: A unique, human readable identifier of the merchant. 
-  ethereum_address:
+    description: A unique, human readable identifier of the merchant.
+  locations: 
+    type: array
+    items:
+      $ref: '../shared/Coordinate.yaml'
+  merchant_ethereum_address:
     type: string
     description: Ethereum address
     format: Ethereum address
@@ -16,7 +20,7 @@ properties:
   merchant_name:
     type: string
     description: The public facing display name of the merchant.
-  description: 
+  description:
     type: string
     description: A public facing description of the business to display to the buyer.
   country:
@@ -27,32 +31,39 @@ properties:
   language_code:
     type: string
     description: The code indicating the language preferences of the merchant, in BCP 47 format. For example, en-US or fr-CA.
-    enum: 
+    enum:
       - EN
-  currency:
+  currency_code:
     type: string
     description: The currency associated with the merchant, in ISO 4217 format. For example, the currency code for US dollars is USD.
-    enum: 
+    enum:
       - USD
   status:
     type: string
     description: The merchant's status
-    enum: 
+    enum:
       - ACTIVE
       - INACTIVE
   main_location:
     type: string
     description: the location of the business
-    $ref: '../shared/Coordinate.yaml'
-  operational_status: 
+    $ref: "../shared/Coordinate.yaml"
+  operational_status:
     type: string
-    enum: 
+    enum:
       - OPEN
       - CLOSED
       - CLOSING_SOON #when business is open for less than 60 more minutes
-  cell_phone: 
+  cell_phone:
     description: A publicly listed cell phone number for the merchant.
-    $ref: '../shared/CellPhone.yaml'
-    
-  
-  
+    $ref: "../shared/CellPhone.yaml"
+required:
+  - id
+  - slug
+  - merchant_name
+  - description
+  - country
+  - language_code
+  - currency_code
+  - status
+  - operational_status
