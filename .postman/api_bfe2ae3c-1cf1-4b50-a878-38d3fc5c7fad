@@ -16,8 +16,11 @@ rootDirectory = postman/collections
 rootDirectory = postman/schemas
 files[] = {"path":"index.yaml","metaData":{}}
 files[] = {"path":"io/Search.yaml","metaData":{}}
-files[] = {"path":"schema/Context.yaml","metaData":{}}
-files[] = {"path":"schema/Intent.yaml","metaData":{}}
+files[] = {"path":"schema/merchant/SearchIntent.yaml","metaData":{}}
+files[] = {"path":"schema/shared/Context.yaml","metaData":{}}
+files[] = {"path":"schema/shared/Coordinate.yaml","metaData":{}}
+files[] = {"path":"schema/shared/Node.yaml","metaData":{}}
+files[] = {"path":"schema/shared/ProviderType.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 rootFiles[] = index.yaml

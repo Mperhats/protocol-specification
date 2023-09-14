@@ -1,12 +1,9 @@
 type: object
 properties:
   context:
-    $ref: '../schema/Context.yaml'
-  message:
-    type: object
-    properties:
-      intent:
-        $ref: '../schema/Intent.yaml'
+    $ref: '../schema/shared/Context.yaml'
+  intent:
+        $ref: '../schema/merchant/SearchIntent.yaml'
 required:
   - context
   - message

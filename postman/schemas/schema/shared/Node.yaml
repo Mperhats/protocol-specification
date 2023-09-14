@@ -1,0 +1,29 @@
+description: Represents a node providing services to the network as defined in the registry. 
+type: object
+properties:  
+  node_id:
+    description: A universally unique identifier of the node.
+    type: string
+  uri:
+    description: The callback URI of the Node.
+    type: string
+    format: uri
+  type:
+    description: The role of node in the network
+    type: string
+    enum:
+      - BSN
+      - SSN
+  public_key:
+    description: The encryption public key of the buyer supporting node as defined in the registry
+    type: string
+  service:
+    description: Service domain that this node offers its products or services in. A single node can operate in multiple industries.
+    type: array
+    items:
+      $ref: "./ProviderType.yaml#/properties/code"
+  serviceable_region:
+    type: array
+    minItems: 3
+    items:
+      $ref: "./Coordinate.yaml"

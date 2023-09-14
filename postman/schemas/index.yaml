@@ -1,15 +1,14 @@
 openapi: '3.0.0'
 info:
   title: The Universal Transaction Protocol (UTP)
-  description: Transaction API specification for primary UTP commercial transaction definitions
+  description: Transaction API specification for primary UTP commerce definitions
   version: 0.0.0
 paths:
   /search:
     post:
       tags:
-        - Beckn Provider Platform (BPP)
-        - Beckn Gateway (BG)
-      description: BAP declares the customer's intent to buy/avail products or services
+        - Seller Supporting Node (SSN)
+      description: The BSN broadcasts the customer's intent to buy products or services
       requestBody:
         content:
           application/json:
@@ -34,44 +33,5 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-components:
-  schemas:
-    SpacecraftId:
-      description: The unique identifier of a spacecraft
-      type: string
-    Spacecraft:
-      type: object
-      required:
-        - id
-        - name
-        - type
-      properties:
-        id:
-          $ref: '#/components/schemas/SpacecraftId'
-        name:
-          type: string
-        type:
-          type: string
-          enum:
-            - capsule
-            - probe
-            - satellite
-            - spaceplane
-            - station
-        description:
-          type: string
-    Error:
-      type: object
-      required:
-        - message
-      properties:
-        message:
-          description: A human readable error message
-          type: string
-  securitySchemes:
-    ApiKey:
-      type: apiKey
-      in: header
-      name: X-Api-Key
 security:
   - ApiKey: []

@@ -1,0 +1,45 @@
+description: Represents a buyers intent to purchase a product or a service from a merchant.
+type: object
+properties:
+  search:
+    description: A raw free text search string describing the name of a seller.
+    type: string
+  location:
+    description: The location where the transaction is to be fulfilled. Typically, the location of the customer. Used by the Seller Supporting Node (SSN) to filter providers.
+    $ref: './shared/Coordinate.yaml'
+  fulfillment_intent:
+    description: Defines the buyer's intended method for acquiring the product or service
+    type: string
+    enum:
+      - PICKUP  # Represents the option for the buyer to pick up the product.
+      - SHIPMENT  # Represents the option for shipping the product to the buyer.
+      - DELIVERY  # Represents the option for delivering the product to the buyer. This option will require a second search intent for a dispatch service.
+  merchant_type:
+    description: Defines the buyer's intended merchant type.
+    type: string
+    enum:
+      - Food 
+      - Convenience
+      - Grocery
+      - Pets
+      - Flowers
+      - Packages
+      - Alcohol
+  cuisine_type:
+    description: Defines the cuisine type when the merchant type is 'Food.'
+    type: string
+    enum:
+      - Mexican
+      - Seafood
+      - French
+      - Thai
+      - Burgers
+      - Indian
+      - Drinks
+      - American
+      - Chinese
+      - FastFood
+      - Dessert
+required:
+  - location
+  - fulfillment_intent
