@@ -3,7 +3,7 @@ properties:
   context:
     $ref: '../schema/shared/Context.yaml'
   intent:
-        $ref: '../schema/merchant/SearchIntent.yaml'
+    $ref: '../schema/merchant/SearchIntent.yaml'
 required:
   - context
-  - message
+  - intent

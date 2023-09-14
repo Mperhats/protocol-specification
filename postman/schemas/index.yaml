@@ -4,11 +4,11 @@ info:
   description: Transaction API specification for primary UTP commerce definitions
   version: 0.0.0
 paths:
-  /search:
+  /find_merchants:
     post:
       tags:
         - Seller Supporting Node (SSN)
-      description: The BSN broadcasts the customer's intent to buy products or services
+      description: The BSN broadcasts the customer's request for merchants offering products or services
       requestBody:
         content:
           application/json:
@@ -16,7 +16,7 @@ paths:
               $ref : './io/Search.yaml'
       responses:
         '200':
-          description: The spacecraft corresponding to the provided `spacecraftId`
+          description: A catalog of providers represented by the Seller Supporting Node (SSN)
           content:
             application/json:
               schema:
@@ -26,12 +26,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: './Error.yaml'
         500:
           description: Unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: './Error.yaml'
 security:
   - ApiKey: []

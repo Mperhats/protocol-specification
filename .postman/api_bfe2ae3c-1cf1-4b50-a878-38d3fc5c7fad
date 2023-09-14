@@ -14,9 +14,13 @@ rootDirectory = postman/collections
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"Error.yaml","metaData":{}}
 files[] = {"path":"index.yaml","metaData":{}}
 files[] = {"path":"io/Search.yaml","metaData":{}}
+files[] = {"path":"schema/dispatch/SearchIntent.yaml","metaData":{}}
+files[] = {"path":"schema/merchant/Catalog.yaml","metaData":{}}
 files[] = {"path":"schema/merchant/SearchIntent.yaml","metaData":{}}
+files[] = {"path":"schema/registry/Search.yaml","metaData":{}}
 files[] = {"path":"schema/shared/Context.yaml","metaData":{}}
 files[] = {"path":"schema/shared/Coordinate.yaml","metaData":{}}
 files[] = {"path":"schema/shared/Node.yaml","metaData":{}}
