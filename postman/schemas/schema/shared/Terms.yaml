@@ -8,7 +8,7 @@ properties:
         type: integer
         format: int64
         minimum: -1
-        description: Unix timestamp in seconds representing when these terms expire. A value of -1 suggests that this response is not cacheable and should only be used once. 
+        description: Unix timestamp in seconds representing when terms expire. A value of -1 suggests that this response is not cacheable and should only be used once. 
 required:
     - payment_terms
     - expiration_date
