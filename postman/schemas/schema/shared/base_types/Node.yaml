@@ -8,6 +8,8 @@ properties:
     description: The callback URI of the Node.
     type: string
     format: uri
+  role:
+    $ref: './NetworkRole.yaml'
   public_key:
     description: The encryption public key of the buyer supporting node as defined in the registry
     type: string

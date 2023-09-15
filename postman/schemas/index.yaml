@@ -101,6 +101,36 @@ paths:
                   $ref: './schema/shared/Error.yaml'
   /search/{merchant_id}/menu:
     parameters:
+      - name: include_menu
+        description: Include the Menu data in the response.
+        in: query
+        schema:
+          type: boolean
+          default: true
+      - name: include_collections
+        description: Include the collections in the data response.
+        in: query
+        schema:
+          type: boolean
+          default: true
+      - name: include_products
+        description: Include the product data in the response.
+        in: query
+        schema:
+          type: boolean
+          default: true
+      - name: include_product_options
+        description: Include the product options data in the response.
+        in: query
+        schema:
+          type: boolean
+          default: true
+      - name: include_product_suboptions
+        description: Include the product suboptions data in the response.
+        in: query
+        schema:
+          type: boolean
+          default: true
       - name: merchant_id
         description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
           <ul>
@@ -127,8 +157,6 @@ paths:
                 properties:
                   data:
                     $ref: './schema/merchant/Menu.yaml'
-                  terms: 
-                    $ref: './schema/shared/Terms.yaml'
         404:
           description: No data found for the provided value
           content:
