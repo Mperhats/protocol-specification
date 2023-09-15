@@ -11,7 +11,7 @@ properties:
   locations: 
     type: array
     items:
-      $ref: '../shared/Coordinate.yaml'
+      $ref: '../shared/primitives/Coordinate.yaml'
   merchant_ethereum_address:
     type: string
     description: Ethereum address
@@ -43,10 +43,6 @@ properties:
     enum:
       - ACTIVE
       - INACTIVE
-  main_location:
-    type: string
-    description: the location of the business
-    $ref: "../shared/Coordinate.yaml"
   operational_status:
     type: string
     enum:
@@ -55,7 +51,7 @@ properties:
       - CLOSING_SOON #when business is open for less than 60 more minutes
   cell_phone:
     description: A publicly listed cell phone number for the merchant.
-    $ref: "../shared/CellPhone.yaml"
+    $ref: '../shared/primitives/CellPhone.yaml'
 required:
   - id
   - slug

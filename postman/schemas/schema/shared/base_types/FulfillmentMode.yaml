@@ -1,0 +1,7 @@
+title: Fulfillment Mode
+description: Defines the buyer's intended method for acquiring the product or service or the Sellers available method for fulfilling the buyers demand.
+type: string
+enum:
+  - PICKUP  # Represents the option for the buyer to pick up the product.
+  - SHIPMENT  # Represents the option for shipping the product to the buyer.
+  - DELIVERY  # Represents the option for delivering the product to the buyer. This option will require a second search intent for a dispatch service.

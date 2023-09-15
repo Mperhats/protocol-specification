@@ -3,7 +3,7 @@ description: Required search parameters for a Buyer Supporting Node (BSN) to que
 type: object
 properties:
   context:
-    $ref: '../schema/shared/Context.yaml'
+    $ref: '../schema/shared/base_types/Context.yaml'
   intent:
     $ref: '../schema/merchant/Intent.yaml'
 required:

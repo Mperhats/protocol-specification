@@ -1,0 +1,28 @@
+title: Menu
+description: Defines a specific collection of items available for purchase
+type: object
+properties: 
+    name: 
+        description: Provides context to the buyer about the menu and it's contents. (e.g. Lunch Menu)
+        type: string
+    description:
+        description: Provides additional context to the buyer about the menu  and it's contents
+        type: string
+    fulfillment_modes: 
+        type: array
+        items:
+            $ref: '../shared/base_types/FulfillmentMode.yaml'
+    schedules:
+        description: Defines the availability of the products within this menu
+        type: array
+        items: 
+            $ref: './Schedule.yaml'
+    product_collections:
+        description: Defines different collections of products within this menu. Used to breakup products into useful categories (e.g. Appetizers, Desserts, etc.)
+        type: array
+        items:
+            $ref: "./Collection.yaml"
+required:
+    - name
+    - schedules
+    - product_collection

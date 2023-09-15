@@ -1,3 +1,4 @@
+title: Context
 description: This object must be passed in every interaction between a Seller Supporting Node (SSN) and a Buyer Supporting Node (BSN). Provides an overview to a receiving node with information about the intended transaction. Typically, a Buyer Supporting Node (BSN) sets the context based on the consumers location and search. Context includes - <ol><li>Demographic information like `industry` and `location`.</li><li>Communication details like the sending and receiving Node ID's and API URL.</li><li>Interoperability information like the protocol version</li><li>Transaction details like the receiving Nodes call method, the transaction_id of a Buyer Supporting Node (BSN) session, a `time to live`, and a `timestamp`</li></ol> 
 type: object
 properties:

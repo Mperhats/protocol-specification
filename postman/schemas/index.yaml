@@ -69,12 +69,15 @@ paths:
           in: path
           required: true
           schema:
-            $ref: './schema/merchant/Merchant.yaml#/properties/merchant_id'
+            oneOf:
+              - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_ethereum_address'
+              - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_slug' 
+              - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_id'
       get:
         summary: Find information about a specific merchant
         responses:
           '200':
-            description: A single merchants represented by the Seller Supporting Node (SSN)
+            description: A single merchant represented by the Seller Supporting Node (SSN)
             content:
               application/json:
                 schema:
@@ -109,21 +112,21 @@ paths:
         required: true
         schema:
           oneOf:
-            - $ref: './schema/merchant/Merchant.yaml#/properties/ethereum_address'
-            - $ref: './schema/merchant/Merchant.yaml#/properties/slug' 
+            - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_ethereum_address'
+            - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_slug' 
             - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_id'
     get:
       summary: Retrieves information about the merchants catalog, available items, and the affiliated prices to display to a customer of a Buyer Supporting Node (BSN)
       responses:
         '200':
-          description: A single merchants represented by the Seller Supporting Node (SSN)
+          description: A menu for a specific merchant
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   data:
-                    $ref: './schema/merchant/Merchant.yaml'
+                    $ref: './schema/merchant/Menu.yaml'
                   terms: 
                     $ref: './schema/shared/Terms.yaml'
         404:

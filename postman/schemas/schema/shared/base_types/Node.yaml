@@ -8,23 +8,17 @@ properties:
     description: The callback URI of the Node.
     type: string
     format: uri
-  type:
-    description: The role of node in the network
-    type: string
-    enum:
-      - BSN
-      - SSN
   public_key:
     description: The encryption public key of the buyer supporting node as defined in the registry
     type: string
-  provider_type_codes:
+  provider_type:
     description: The network defined domain that this node provides its products or services in. A single node can operate in multiple industries.
     type: array
     minItems: 1
     items:
-      $ref: './ProviderType.yaml#/properties/code'
+      $ref: './ProviderType.yaml'
   serviceable_region:
     type: array
     minItems: 3
     items:
-      $ref: './Coordinate.yaml'
+      $ref: '../primitives/Coordinate.yaml'
