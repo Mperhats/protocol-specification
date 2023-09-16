@@ -3,8 +3,10 @@ info:
   title: The Universal Transaction Protocol (UTP)
   description: Transaction API specification for primary UTP commerce definitions
   version: 0.0.0
+security:
+  - NodeAuth: []
 paths:
-  $ref: './discovery/Paths.yaml'
+  $ref: './discovery/DiscoveryPaths.yaml'
 components:
   securitySchemes:
     NodeAuth:
@@ -12,5 +14,5 @@ components:
       in: header
       name: Authorization
       description: 'Signature of message body using BSN or SSN signing public key as defined in the registry. <br/><br/>Format:<br/><br/><code>Authorization: Signature keyId="{subscriber_id}|{unique_key_id}|{algorithm}",algorithm="ed25519",created="1606970629",expires="1607030629",headers="(created) (expires) digest",signature="Base64(signing string)"</code>'
-security:
-  - NodeAuth: []
+  schemas:
+    $ref: './schema/components.yaml' 
