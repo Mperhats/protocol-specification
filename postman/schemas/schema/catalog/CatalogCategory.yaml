@@ -17,8 +17,8 @@ properties:
         type: array
         items: 
             $ref: '../shared/primitives/media/ImageFile.yaml'
-    items: 
+    item_ids: 
         description: A list of <code>CatalogItem</code>'s affiliated with this category
         type: array
         items:
-            $ref: './CatalogItem.yaml'
+            $ref: './CatalogItem.yaml#/properties/id'

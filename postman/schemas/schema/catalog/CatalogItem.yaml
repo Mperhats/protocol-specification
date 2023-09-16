@@ -46,4 +46,4 @@ properties:
     modifier_group_ids:
         type: array
         items:
-            $ref: './CatalogModifierGroup.yaml#properties/id'
+            $ref: './CatalogModifierGroup.yaml#/properties/id'
