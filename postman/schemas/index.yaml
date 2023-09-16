@@ -15,4 +15,4 @@ components:
       name: Authorization
       description: 'Signature of message body using BSN or SSN signing public key as defined in the registry. <br/><br/>Format:<br/><br/><code>Authorization: Signature keyId="{subscriber_id}|{unique_key_id}|{algorithm}",algorithm="ed25519",created="1606970629",expires="1607030629",headers="(created) (expires) digest",signature="Base64(signing string)"</code>'
   schemas:
-    $ref: './schema/components.yaml' 
+    $ref: './components.yaml'
