@@ -21,7 +21,8 @@ properties:
         items:
           $ref: '../schema/shared/protocol_types/FulfillmentMode.yaml'
       include_modifiers:
-        description: A boolean value indicating whether modifers should be returned. 
+        default: false
+        description: A boolean value indicating whether modifer groups and modifier items should be returned. 
 required:
   - context
   - intent

@@ -6,17 +6,6 @@ properties:
   display_message:
     description: A human readable error message
     type: string
-  category: 
-    description: The high-level category representing the error
-    type: string
-    enum:
-      - API_ERROR
-      - AUTHENTICATION_ERROR
-      - INVALID_REQUEST
-      - PAYMENT_METHOD_ERROR
-  field:
-    description: The name of the field provided in the original request (if any) that the error pertains to.
-    type: string
   error_code:
     description: A specific error code
     type: string
@@ -38,3 +27,6 @@ properties:
       - VALUE_EMPTY # The provided value has a default (empty) value such as a blank string.
       - INVALID_CONTENT_TYPE # Invalid content type header.
       - BLOCKED_BY_SERVER # This SSN de-federated the requesting BSN.
+  field:
+    description: The name of the field provided in the original request (if any) that the error pertains to.
+    type: string

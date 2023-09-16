@@ -123,27 +123,24 @@
           application/json:
             schema:
               type: object
-              properties:
-                data:
-                  type: object
-                  description: The catalog data for the merchant
-                  properties: 
-                    catalogs:
-                      type: array
-                      items:
-                        $ref: '../schema/catalog/Catalog.yaml'
-                    categories:
-                        type: array
-                        items:
-                          $ref: '../schema/catalog/CatalogCategory.yaml'
-                    modifier_groups:
-                        type: array
-                        items:
-                          $ref: '../schema/catalog/CatalogModifierGroup.yaml'
+              description: The catalog data for the merchant
+              properties: 
+                catalogs:
+                  type: array
+                  items:
+                    $ref: '../schema/catalog/Catalog.yaml'
+                categories:
+                    type: array
                     items:
-                        type: array
-                        items:
-                          $ref: '../schema/catalog/CatalogItem.yaml'
+                      $ref: '../schema/catalog/CatalogCategory.yaml'
+                modifier_groups:
+                    type: array
+                    items:
+                      $ref: '../schema/catalog/CatalogModifierGroup.yaml'
+                items:
+                    type: array
+                    items:
+                      $ref: '../schema/catalog/CatalogItem.yaml'
       404:
         description: No data found for the provided value
         content:
@@ -156,3 +153,45 @@
           application/json:
             schema:
               $ref: '../schema/shared/primitives/api/Error.yaml'
+/item/{item_id}/modifiers:
+    parameters:
+      - name: item_id
+        description: A unique identifier for the item.
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: get item modifiers
+      responses:
+        '200':
+          description: A single merchant represented by the <code>Seller Supporting Node (SSN)</code>
+          content:
+            application/json:
+              schema:
+                type: object
+                description: The catalog data for the merchant
+                properties: 
+                  item:
+                    description: The <code>CatalogItem</code> affiliated with the <code>item_id</code> parameter in the path parameter.
+                    $ref: '../schema/catalog/CatalogItem.yaml'
+                  modifier_groups:
+                      type: array
+                      items:
+                        $ref: '../schema/catalog/CatalogModifierGroup.yaml'
+                  modifier_items:
+                      type: array
+                      items:
+                        $ref: '../schema/catalog/CatalogItem.yaml'
+        404:
+          description: No data found for the provided value
+          content:
+            application/json:
+              schema:
+                $ref: '../schema/shared/primitives/api/Error.yaml'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '../schema/shared/primitives/api/Error.yaml'
