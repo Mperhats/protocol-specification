@@ -22,10 +22,13 @@ properties:
             - FOR_SALE
             - NOT_FOR_SALE
             - LOW_QUANTITY
-    fulfillment_modes: 
+    supported_fulfillment_modes: 
         type: array
         items:
-            $ref: '../shared/protocol_types/FulfillmentMode.yaml'
+        $ref: '../shared/protocol_types/FulfillmentMode.yaml'
+    contains_alcohol:
+        description: A boolean representing whether or not this item contains alcohol. Important for tax and legal considerations.
+        type: boolean
     images: 
         type: array
         items: 
@@ -33,7 +36,7 @@ properties:
     featured_image: 
         description: Functionally equivalent to <code>images(first:1)</code>
         $ref: '../shared/primitives/media/ImageFile.yaml'
-    modifier_groups:
+    modifier_group_ids:
         type: array
         items:
-            $ref: './CatalogModifierGroup.yaml'
+            $ref: './CatalogModifierGroup.yaml#properties/id'

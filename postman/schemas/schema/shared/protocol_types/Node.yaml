@@ -1,3 +1,4 @@
+title: Network Node Operator
 description: Represents a node providing services to the network as defined in the registry. 
 type: object
 properties:  

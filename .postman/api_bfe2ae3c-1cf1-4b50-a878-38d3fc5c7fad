@@ -14,19 +14,18 @@ rootDirectory = postman/collections
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"discovery/Paths.yaml","metaData":{}}
+files[] = {"path":"discovery/SearchCatalog.yaml","metaData":{}}
+files[] = {"path":"discovery/SearchMerchant.yaml","metaData":{}}
 files[] = {"path":"index.yaml","metaData":{}}
-files[] = {"path":"io/SearchCatalog.yaml","metaData":{}}
-files[] = {"path":"io/SearchMerchant.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/Catalog.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogCategory.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogDiscount.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogItem.yaml","metaData":{}}
-files[] = {"path":"schema/catalog/CatalogItemModifier.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogItemPriceType.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogItemType.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogModifierGroup.yaml","metaData":{}}
 files[] = {"path":"schema/dispatch/Intent.yaml","metaData":{}}
-files[] = {"path":"schema/merchant/Intent.yaml","metaData":{}}
 files[] = {"path":"schema/merchant/Merchant.yaml","metaData":{}}
 files[] = {"path":"schema/merchant/MerchantGroup.yaml","metaData":{}}
 files[] = {"path":"schema/merchant/Schedule.yaml","metaData":{}}

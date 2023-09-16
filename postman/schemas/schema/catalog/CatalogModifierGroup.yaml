@@ -1,0 +1,24 @@
+title: Catalog Modifier Group
+description: A modifier group that contains <code>Modifier</code>'s' to handle specifications related to <code>CatalogItem</code>'s.
+type: object
+properties:
+    name: 
+        description: The modifier group name.
+        type: string
+        maxLength: 255
+    description:
+        description: The description for the modifier group.
+        type: string
+        maxLength: 4096
+    images: 
+        description: A collection of image files related to the modifier group.
+        type: array
+        items: 
+            $ref: '../shared/primitives/media/ImageFile.yaml'
+    modifier_item_ids: 
+        description: > 
+            A list of <code>CatalogItem</code>'s affiliated with this modifier group. 
+            Note that <code>CatalogItem</code>'s represent both items and item modifiers.
+        type: array
+        items:
+            $ref: './CatalogItem.yaml#/properties/id'

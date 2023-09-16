@@ -1,4 +1,4 @@
-title: Fulfillment Modes
+title: Fulfillment Mode
 description: Defines a method for acquiring a product or service
 type: string
 enum:
