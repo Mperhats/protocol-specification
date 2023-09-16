@@ -3,11 +3,11 @@ type: object
 properties:
   location:
     description: A location defining where the services or products are to be fulfilled 
-    $ref: '../shared/primitives/Coordinate.yaml'
+    $ref: '../shared/primitives/Coordinates.yaml'
   codes: 
     description: Defines a filter for a specific provider network code or codes
     type: string
     items:
-      $ref: '../shared/base_types/ProviderType.yaml#/properties/code'
+      $ref: '../shared/protocol_types/ProviderType.yaml#/properties/code'
 required:
   - location

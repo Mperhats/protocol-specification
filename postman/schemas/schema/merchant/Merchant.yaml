@@ -17,7 +17,7 @@ properties:
   merchant_group_id: 
     description: The ID of the Merchant Group that owns this Merchant
   location: 
-    $ref: '../shared/base_types/Location.yaml'
+    $ref: '../shared/primitives/Location.yaml'
   coordinates: 
     $ref: '../shared/primitives/Coordinates.yaml'
   logo:
@@ -40,6 +40,7 @@ properties:
       - ACTIVE
       - INACTIVE
   operational_status:
+    description: Defines the operational state of a business at the time of the request and is calculated by the SSN as a reference to the composite of Menu Schedules   
     type: string
     enum:
       - OPEN
@@ -48,11 +49,6 @@ properties:
   cell_phone_number:
     description: A publicly listed cell phone number for the merchant.
     $ref: '../shared/primitives/CellPhone.yaml'
-  schedule: 
-    description: Defines the hours of operations for this Merchant
-    type: array
-    items:
-      $ref: './Schedule.yaml'
 required:
   - id
   - name

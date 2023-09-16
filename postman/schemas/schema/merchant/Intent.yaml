@@ -7,9 +7,9 @@ properties:
     type: string
   location:
     description: The location where the transaction is to be fulfilled. Typically, the location of the customer. Used by the Seller Supporting Node (SSN) to filter providers.
-    $ref: '../shared/base_types/Location.yaml'
+    $ref: '../shared/protocol_types/Location.yaml'
   fulfillment_intent:
-    $ref: '../shared/base_types/FulfillmentMode.yaml'
+    $ref: '../shared/protocol_types/FulfillmentMode.yaml'
   merchant_type:
     description: Defines the buyer's intended merchant type.
     type: string
