@@ -14,6 +14,7 @@ rootDirectory = postman/collections
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"components.yaml","metaData":{}}
 files[] = {"path":"discovery/DiscoveryPaths.yaml","metaData":{}}
 files[] = {"path":"discovery/SearchCatalog.yaml","metaData":{}}
 files[] = {"path":"discovery/SearchMerchant.yaml","metaData":{}}
@@ -25,7 +26,6 @@ files[] = {"path":"schema/catalog/CatalogItemModifier.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogItemPriceType.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogItemType.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogModifierGroup.yaml","metaData":{}}
-files[] = {"path":"schema/components.yaml","metaData":{}}
 files[] = {"path":"schema/merchant/Merchant.yaml","metaData":{}}
 files[] = {"path":"schema/merchant/MerchantGroup.yaml","metaData":{}}
 files[] = {"path":"schema/merchant/Schedule.yaml","metaData":{}}
