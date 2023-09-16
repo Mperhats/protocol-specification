@@ -23,4 +23,4 @@ properties:
     type: array
     minItems: 3
     items:
-      $ref: '../primitives/Coordinate.yaml'
+      $ref: '../primitives/Coordinates.yaml'

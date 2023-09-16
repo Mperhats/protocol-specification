@@ -1,0 +1,5 @@
+title: Currency Code
+type: string
+description: The currency associated with the merchant, in ISO 4217 format. For example, the currency code for US dollars is USD.
+enum:
+    - USD

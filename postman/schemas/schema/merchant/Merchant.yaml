@@ -1,42 +1,36 @@
 title: Merchant
 type: object
-description: The requested Merchant based on the buyers serch intent
+description: Defines details about a merchant and specifies information that a Buyer Supporting Node (BSN) can display to it's users.
 properties:
-  merchant_id:
+  id:
     type: string
-    description: The unique ID of the merchant in the Seller Supporting Node's (SSN) system
-  merchant_slug:
+    description: A globally unique ID of the merchant in the Seller Supporting Node's (SSN) system
+  slug:
     type: string
-    description: A unique, human readable identifier of the merchant.
-  locations: 
-    type: array
-    items:
-      $ref: '../shared/primitives/Coordinate.yaml'
-  merchant_ethereum_address:
-    type: string
-    description: Ethereum address
-    pattern: '^0x[0-9a-fA-F]{40}$'  # Regular expression for Ethereum address
-  merchant_name:
+    description: A globally unique, human readable identifier of the merchant. (useful for displaying in urls)
+  name:
     type: string
     description: The public facing display name of the merchant.
+    maxLength: 100
+  merchant_group_id: 
+    description: The ID of the Merchant Group that owns this Merchant
+  location: 
+    $ref: '../shared/base_types/Location.yaml'
+  coordinates: 
+    $ref: '../shared/primitives/Coordinates.yaml'
+  logo:
+    description: A user facing logo for the merchant.
+    $ref: '../shared/primitives/media/ImageFile.yaml'
   description:
     type: string
     description: A public facing description of the business to display to the buyer.
-  country:
-    type: string
-    description: The country code associated with the merchant, in the two-letter format of ISO 3166. For example, US or JP.
-    enum:
-      - US
+    maxLength: 1024
+  country_code:
+    $ref: '../shared/primitives/scalars/CountryCode.yaml'
   language_code:
-    type: string
-    description: The code indicating the language preferences of the merchant, in BCP 47 format. For example, en-US or fr-CA.
-    enum:
-      - EN
+      $ref: '../shared/primitives/scalars/LanguageCode.yaml'
   currency_code:
-    type: string
-    description: The currency associated with the merchant, in ISO 4217 format. For example, the currency code for US dollars is USD.
-    enum:
-      - USD
+    $ref: '../shared/primitives/scalars/CurrencyCode.yaml'
   status:
     type: string
     description: The merchant's status
@@ -48,14 +42,17 @@ properties:
     enum:
       - OPEN
       - CLOSED
-      - CLOSING_SOON #when business is open for less than 60 more minutes
-  cell_phone:
+      - CLOSING_SOON
+  cell_phone_number:
     description: A publicly listed cell phone number for the merchant.
     $ref: '../shared/primitives/CellPhone.yaml'
+  
 required:
   - id
+  - name
   - slug
   - merchant_name
+  - marchant_logo
   - description
   - country
   - language_code

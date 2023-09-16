@@ -8,4 +8,7 @@ properties:
     description:
         type: string
         description: Provides additional context to the buyer about the menu  and it's contents
-    
+    images:
+        type: array
+        items: 
+            $ref: '../primitives/media/ImageFile.yaml'

@@ -4,10 +4,10 @@ type: object
 properties:
   pickup_location:
     description: The location where the object or person is to be picked up
-    $ref: '../shared/primitives/Coordinate.yaml'
+    $ref: '../shared/primitives/Coordinates.yaml'
   dropoff_location:
     description: The location where the object or person is to be dropped off
-    $ref: '../shared/primitives/Coordinate.yaml'
+    $ref: '../shared/primitives/Coordinates.yaml'
 required:
   - pickup_location
   - dropoff_location

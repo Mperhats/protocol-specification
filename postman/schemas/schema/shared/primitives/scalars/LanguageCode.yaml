@@ -1,0 +1,5 @@
+title: Language Code
+type: string
+description: The code indicating the language preferences of the merchant, in BCP 47 format. For example, en-US or fr-CA.
+enum:
+    - en-US
