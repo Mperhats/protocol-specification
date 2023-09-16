@@ -24,7 +24,7 @@ All communication throughout order lifecycle APIs follow the below structure:
 | `context`  | Contains header information used for packet switching, key lookup, and encryption |
 | `message`  | Contains information pertaining to the intended transaction |
 
-#### Explore API
+#### Discovery API
 This is the stage where a Buyer searches or explores the 
 product(s) or service(s) they intend to purchase from a Seller. 
 
@@ -34,7 +34,7 @@ query the network with their Intent. The Explore API has a callback mechanism
 that returns a Catalog which includes a selection of Sellers offering the 
 intended product(s) or service(s). 
 
-The _explore_ process requires both a query to the registry contract and an 
+The discovery process requires both a query to the registry contract and an 
 API request to at least 1 server.
 
 #### Order API 
