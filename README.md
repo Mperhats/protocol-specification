@@ -57,7 +57,7 @@ feedback, require customer support, or initiate a return/refund if
 dissatisfied.
 
 ## Testing 
-When editing, test to ensure schemas are valud by running the following:
+When editing, test to ensure schemas are validd by running the following command in your terminal:
 ```sh
 swagger-cli bundle postman/schemas/index.yaml --outfile api/api.yaml --type yaml
 ```
