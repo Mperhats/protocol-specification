@@ -22,6 +22,7 @@ files[] = {"path":"schema/catalog/Catalog.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogCategory.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogDiscount.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogItem.yaml","metaData":{}}
+files[] = {"path":"schema/catalog/CatalogItemModifier.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogItemPriceType.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogItemType.yaml","metaData":{}}
 files[] = {"path":"schema/catalog/CatalogModifierGroup.yaml","metaData":{}}

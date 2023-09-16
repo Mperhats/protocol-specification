@@ -1,4 +1,4 @@
-title: Catalog Item
+title: Catalog Modifier Item
 description: An item in the catalog of a <code>Merchant</code>
 type: object
 properties: 
@@ -15,8 +15,18 @@ properties:
         $ref: './CatalogItemType.yaml'
     product_price:
         $ref: '../shared/Money.yaml'
+    minimum_selection_requirement: 
+        description: The minimum number of selections to avail the <code>Modifier</code>
+        type: integer
+        default: 1
+        format: int32
+    maximum_selection_requirement: 
+        description: The minimum number of selections to avail this <code>Modifier</code>
+        type: integer
+        default: 1
+        format: int32
     ordinal: 
-        description: Determines where this <code>CatalogItem></code> appears in the <code>CatalogCategory</code>
+        description: Determines where this <code>CatalogModifierItem></code> appears in the <code>CatalogModifierGroup</code>
         type: integer
         format: int32
     inventory_status: 

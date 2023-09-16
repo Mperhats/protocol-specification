@@ -141,6 +141,10 @@
                     type: array
                     items:
                       $ref: '../schema/catalog/CatalogItem.yaml'
+                modifier_items:
+                    type: array
+                    items:
+                      $ref: '../schema/catalog/CatalogItemModifier.yaml'
       404:
         description: No data found for the provided value
         content:
@@ -182,7 +186,7 @@
                   modifier_items:
                       type: array
                       items:
-                        $ref: '../schema/catalog/CatalogItem.yaml'
+                        $ref: '../schema/catalog/CatalogItemModifier.yaml'
         404:
           description: No data found for the provided value
           content:

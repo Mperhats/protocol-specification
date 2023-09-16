@@ -10,15 +10,23 @@ properties:
         description: The description for the modifier group.
         type: string
         maxLength: 4096
+    minimum_selection_requirement: 
+        description: The minimum number of <CatalogItemModifier>'s selections to satisfy
+        type: integer
+        default: 1
+        format: int32
+    maximum_selection_requirement: 
+        description: The minimum number of <CatalogItemModifier>'s selections to satisfy
+        type: integer
+        default: 1
+        format: int32
     images: 
         description: A collection of image files related to the modifier group.
         type: array
         items: 
             $ref: '../shared/primitives/media/ImageFile.yaml'
     modifier_item_ids: 
-        description: > 
-            A list of <code>CatalogItem</code>'s affiliated with this modifier group. 
-            Note that <code>CatalogItem</code>'s represent both items and item modifiers.
+        description: A list of <code>CatalogItemModifier</code>'s affiliated with this modifier group. 
         type: array
         items:
-            $ref: './CatalogItem.yaml#/properties/id'
+            $ref: './CatalogItemModifier.yaml#/properties/id'
