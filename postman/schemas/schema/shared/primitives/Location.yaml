@@ -33,7 +33,7 @@ properties:
     description: The address's postal code. For a full list of field meanings by country.
     type: string
   countryCode:
-    $ref: '../primitives/scalars/CountryCode.yaml'
+    $ref: './CountryCode.yaml'
   firstName:
     description: Optional first name when it's representing recipient.
     type: string

@@ -2,6 +2,9 @@ title: Catalog Modifier Group
 description: A modifier group that contains <code>Modifier</code>'s' to handle specifications related to <code>CatalogItem</code>'s.
 type: object
 properties:
+    id: 
+        description: A unique identifier for this <code>CatalogModifierGroup</code>
+        type: string
     name: 
         description: The modifier group name.
         type: string

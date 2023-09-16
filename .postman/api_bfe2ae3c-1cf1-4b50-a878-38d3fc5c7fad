@@ -34,6 +34,10 @@ files[] = {"path":"schema/registry/Search.yaml","metaData":{}}
 files[] = {"path":"schema/shared/primitives/api/Error.yaml","metaData":{}}
 files[] = {"path":"schema/shared/primitives/api/Pagination.yaml","metaData":{}}
 files[] = {"path":"schema/shared/primitives/api/Terms.yaml","metaData":{}}
+files[] = {"path":"schema/shared/primitives/api/terms/CancelationTerm.yaml","metaData":{}}
+files[] = {"path":"schema/shared/primitives/api/terms/FulfillmentTerm.yaml","metaData":{}}
+files[] = {"path":"schema/shared/primitives/api/terms/PaymentTerm.yaml","metaData":{}}
+files[] = {"path":"schema/shared/primitives/api/terms/RefundTerm.yaml","metaData":{}}
 files[] = {"path":"schema/shared/primitives/CellPhone.yaml","metaData":{}}
 files[] = {"path":"schema/shared/primitives/Coordinates.yaml","metaData":{}}
 files[] = {"path":"schema/shared/primitives/CountryCode.yaml","metaData":{}}
@@ -50,10 +54,6 @@ files[] = {"path":"schema/shared/protocol_types/FulfillmentMode.yaml","metaData"
 files[] = {"path":"schema/shared/protocol_types/NetworkRole.yaml","metaData":{}}
 files[] = {"path":"schema/shared/protocol_types/Node.yaml","metaData":{}}
 files[] = {"path":"schema/shared/protocol_types/ProviderType.yaml","metaData":{}}
-files[] = {"path":"schema/shared/terms/CancelationTerm.yaml","metaData":{}}
-files[] = {"path":"schema/shared/terms/FulfillmentTerm.yaml","metaData":{}}
-files[] = {"path":"schema/shared/terms/PaymentTerm.yaml","metaData":{}}
-files[] = {"path":"schema/shared/terms/RefundTerm.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 rootFiles[] = index.yaml

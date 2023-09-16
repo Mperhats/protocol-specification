@@ -3,7 +3,7 @@ description: Defines payment settlement term between the Buyer Supporting Node (
 type: object
 properties:
   id:
-    description: Identifier of the payment term. This id should be created by the BSN on the initial request and stored  
+    description: Identifier of the payment term. This id should be created by the BSN on the initial request and stored by both parties
     type: string
   collected_by:
     description: This field indicates who is the collector of the payment. The BSN can set this value to 'BSN' if it wants to collect the payment first and settle it to the SSN. Alternatively, the SSN can set this field with the value 'SSN' if it wants the payment to be made directly. 

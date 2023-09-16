@@ -2,6 +2,9 @@ title: Catalog Item
 description: An item in the catalog of a <code>Merchant</code>
 type: object
 properties: 
+    id: 
+        description: A unique identifier for this <code>CatalogItem</code>
+        type: string
     name: 
         description: The item's name. This is a searchable attribute for use in applicable query filters.
         type: string
@@ -14,7 +17,7 @@ properties:
     product_type:
         $ref: './CatalogItemType.yaml'
     product_price:
-        $ref: '../shared/Money.yaml'
+        $ref: '../shared/primitives/Money.yaml'
     ordinal: 
         description: Determines where this <code>CatalogItem></code> appears in the <code>CatalogCategory</code>
         type: integer

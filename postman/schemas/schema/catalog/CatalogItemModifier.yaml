@@ -1,7 +1,10 @@
-title: Catalog Modifier Item
+title: Catalog Item Modifier
 description: An item in the catalog of a <code>Merchant</code>
 type: object
 properties: 
+    id: 
+        description: A unique identifier for this <code>CatalogItemModifier</code>
+        type: string
     name: 
         description: The item's name. This is a searchable attribute for use in applicable query filters.
         type: string
@@ -14,7 +17,7 @@ properties:
     product_type:
         $ref: './CatalogItemType.yaml'
     product_price:
-        $ref: '../shared/Money.yaml'
+        $ref: '../shared/primitives/Money.yaml'
     minimum_selection_requirement: 
         description: The minimum number of selections to avail the <code>Modifier</code>
         type: integer
