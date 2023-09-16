@@ -62,4 +62,3 @@ required:
   - currency_code
   - status
   - operational_status
-  - schedule
