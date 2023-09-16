@@ -5,11 +5,13 @@ properties:
   search_string:
     description: A raw free text search string describing the name or description of a seller.
     type: string
-  location:
-    description: The location where the transaction is to be fulfilled. Typically, the location of the customer. Used by the Seller Supporting Node (SSN) to filter providers.
-    $ref: '../shared/protocol_types/Location.yaml'
-  fulfillment_intent:
-    $ref: '../shared/protocol_types/FulfillmentMode.yaml'
+  coordinates:
+    description: The location coordinates where the transaction is to be fulfilled. Typically, the location of the customer. Used by the Seller Supporting Node (SSN) to filter providers.
+    $ref: '../shared/primitives/Coordinates.yaml'
+  fulfillment_modes:
+    type: array
+    items:
+      $ref: '../shared/protocol_types/FulfillmentMode.yaml'
   merchant_type:
     description: Defines the buyer's intended merchant type.
     type: string
@@ -37,5 +39,5 @@ properties:
       - FAST_FOOD
       - DESSERT
 required:
-  - location
-  - fulfillment_intent
+  - coordinates
+  - fulfillment_modes

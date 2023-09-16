@@ -6,8 +6,6 @@ properties:
     $ref: '../shared/primitives/Coordinates.yaml'
   codes: 
     description: Defines a filter for a specific provider network code or codes
-    type: string
-    items:
-      $ref: '../shared/protocol_types/ProviderType.yaml#/properties/code'
+    $ref: '../shared/protocol_types/ProviderType.yaml#/properties/code'
 required:
   - location

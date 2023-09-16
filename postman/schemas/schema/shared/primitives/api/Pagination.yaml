@@ -1,5 +1,5 @@
 title: Pagination
-description: pagination response used to reduce server load
+description: pagination response used to reduce server load in queries to Seller Supporting Nodes
 type: object
 properties:
   total:

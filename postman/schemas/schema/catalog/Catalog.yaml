@@ -1,4 +1,4 @@
-title: Menu
+title: Catalog
 description: Defines a specific collection of items available for purchase
 type: object
 properties: 
@@ -17,6 +17,11 @@ properties:
         type: array
         items: 
             $ref: './Schedule.yaml'
+    product_collections:
+        description: Defines different collections of products within this menu. Used to breakup products into useful categories (e.g. Appetizers, Desserts, etc.)
+        type: array
+        items:
+            $ref: "./Collection.yaml"
 required:
     - name
     - schedules

@@ -13,7 +13,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: './io/MerchantSearch.yaml'
+              $ref: './io/SearchMerchant.yaml'
       parameters:
         - in: query
           name: page
@@ -42,21 +42,21 @@ paths:
                     items:
                       $ref: './schema/merchant/Merchant.yaml'
                   pagination:
-                    $ref: './schema/shared/Pagination.yaml'
+                    $ref: './schema/shared/primitives/api/Pagination.yaml'
                   terms: 
-                    $ref: './schema/shared/Terms.yaml'
+                    $ref: './schema/shared/primitives/api/Terms.yaml'
         404:
           description: No data found for the provided value
           content:
             application/json:
               schema:
-                $ref: './schema/shared/Error.yaml'
+                $ref: './schema/shared/primitives/api/Error.yaml'
         500:
           description: Unexpected error
           content:
             application/json:
               schema:
-                $ref: './schema/shared/Error.yaml'
+                $ref: './schema/shared/primitives/api/Error.yaml'
   /search/{merchant_id}:
       parameters:
         - name: merchant_id
@@ -84,19 +84,19 @@ paths:
                     data:
                       $ref: './schema/merchant/Merchant.yaml'
                     terms: 
-                      $ref: './schema/shared/Terms.yaml'
+                      $ref: './schema/shared/primitives/api/Terms.yaml'
           404:
             description: No data found for the provided value
             content:
               application/json:
                 schema:
-                  $ref: './schema/shared/Error.yaml'
+                  $ref: './schema/shared/primitives/api/Error.yaml'
           500:
             description: Unexpected error
             content:
               application/json:
                 schema:
-                  $ref: './schema/shared/Error.yaml'
+                  $ref: './schema/shared/primitives/api/Error.yaml'
   /search/{merchant_id}/menu:
     parameters:
       - name: include_menu
@@ -160,13 +160,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: './schema/shared/Error.yaml'
+                  $ref: './schema/shared/primitives/api/Error.yaml'
         500:
           description: Unexpected error
           content:
             application/json:
               schema:
-                $ref: './schema/shared/Error.yaml'
+                  $ref: './schema/shared/primitives/api/Error.yaml'
 components:
   securitySchemes:
     NodeAuth:

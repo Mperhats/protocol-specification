@@ -1,0 +1,9 @@
+title: Catalog Item Type
+description: The item types query expression to return items or item variations having the specified product types.
+type: string
+enum: 
+    - ALCOHOL # represents an alcoholic beverage (e.g. beer)
+    - FOOD # represents a food item (e.g. Pizza)
+    - REGULAR # represents a regular (e.g. T-shirt)
+    - SERVICE (e.g. a lawn service)
+    - APPOINTMENTS (e.g. a haircut)

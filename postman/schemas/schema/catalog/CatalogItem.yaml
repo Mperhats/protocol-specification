@@ -1,0 +1,15 @@
+title: Catalog Item
+description: An item in the catalog of a merchant
+type: object
+properties: 
+    name: 
+        description: The item's name. This is a searchable attribute for use in applicable query filters.
+        type: string
+        maxLength: 512
+        minLength: 1
+    description: 
+        description: The item's description. This is a searchable attribute for use in applicable query filters.
+        type: string
+        maxLength: 4096
+    item_type:
+        $ref: './CatalogItemType.yaml'
