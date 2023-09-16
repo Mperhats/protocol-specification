@@ -63,16 +63,14 @@ paths:
           description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
             <ul>
               <li>merchant_id</li>
-              <li>ethereum_address</li>
               <li>slug</li>
             </ul>
           in: path
           required: true
           schema:
             oneOf:
-              - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_ethereum_address'
-              - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_slug' 
-              - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_id'
+              - $ref: './schema/merchant/Merchant.yaml#/properties/id' 
+              - $ref: './schema/merchant/Merchant.yaml#/properties/slug'
       get:
         summary: Find information about a specific merchant
         responses:

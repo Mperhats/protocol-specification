@@ -14,11 +14,11 @@ properties:
     type: string
     description: A description of the merchant group and the type of services or products they offer to the network.
   country_code:
-    $ref: '../shared/primitives/scalars/CountryCode.yaml'
+    $ref: '../shared/primitives/CountryCode.yaml'
   language_code:
-      $ref: '../shared/primitives/scalars/LanguageCode.yaml'
+      $ref: '../shared/primitives/LanguageCode.yaml'
   currency_code:
-    $ref: '../shared/primitives/scalars/CurrencyCode.yaml'
+    $ref: '../shared/primitives/CurrencyCode.yaml'
   status:
     type: string
     description: The merchant groups status

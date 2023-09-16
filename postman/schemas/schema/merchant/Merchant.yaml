@@ -8,6 +8,8 @@ properties:
   slug:
     type: string
     description: A globally unique, human readable identifier of the merchant. (useful for displaying in urls)
+  merchant_category_code:
+    $ref: '../shared/primitives/MerchantCategoryCode.yaml'
   name:
     type: string
     description: The public facing display name of the merchant.
@@ -26,11 +28,11 @@ properties:
     description: A public facing description of the business to display to the buyer.
     maxLength: 1024
   country_code:
-    $ref: '../shared/primitives/scalars/CountryCode.yaml'
+    $ref: '../shared/primitives/CountryCode.yaml'
   language_code:
-      $ref: '../shared/primitives/scalars/LanguageCode.yaml'
+      $ref: '../shared/primitives/LanguageCode.yaml'
   currency_code:
-    $ref: '../shared/primitives/scalars/CurrencyCode.yaml'
+    $ref: '../shared/primitives/CurrencyCode.yaml'
   status:
     type: string
     description: The merchant's status
@@ -46,11 +48,16 @@ properties:
   cell_phone_number:
     description: A publicly listed cell phone number for the merchant.
     $ref: '../shared/primitives/CellPhone.yaml'
-  
+  schedule: 
+    description: Defines the hours of operations for this Merchant
+    type: array
+    items:
+      $ref: './Schedule.yaml'
 required:
   - id
   - name
   - slug
+  - merchant_category_code
   - merchant_name
   - marchant_logo
   - description
@@ -59,3 +66,4 @@ required:
   - currency_code
   - status
   - operational_status
+  - schedule

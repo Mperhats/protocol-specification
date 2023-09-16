@@ -1,5 +1,5 @@
 title: Schedule
-description: Defines a range of date times for a specific day when products or services are available to purchase
+description: Defines a range of date times in local time for a specific day when products or services are available to purchase
 type: object
 properties:
   day:
@@ -20,25 +20,25 @@ properties:
       description: Defines a range of intervals defining the time of day 
       properties:
         from_hour: 
-          description: Beginning hour interval.
+          description: Beginning hour interval in local time.
           type: integer
           format: int32
           minimum: 0
           maximum: 23
         to_hour: 
-          description: Ending hour interval.
+          description: Ending hour interval in local time.
           type: integer
           format: int32
           minimum: 0
           maximum: 23
         from_minute: 
-          description: Beginning minute interval.
+          description: Beginning minute interval in local time.
           type: integer
           format: int32
           minimum: 0
           maximum: 59
         to_minute: 
-          description: Ending minute interval.
+          description: Ending minute interval in local time.
           type: integer
           format: int32
           minimum: 0

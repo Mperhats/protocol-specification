@@ -1,5 +1,0 @@
-title: Country Code
-type: string
-description: The country code associated with the merchant, in the two-letter format of ISO 3166. For example, US or JP.
-enum:
-  - US
