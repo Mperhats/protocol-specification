@@ -1,28 +1,24 @@
 title: Catalog
-description: Defines a specific collection of items available for purchase
+description: Defines a specific collection of <code>CatalogItem</code>'s available for purchase
 type: object
 properties: 
     name: 
-        description: Provides context to the buyer about the menu and it's contents. (e.g. Lunch Menu)
+        description: Provides context to the buyer about the catalog and it's contents. (e.g. Lunch Menu)
         type: string
     description:
-        description: Provides additional context to the buyer about the menu  and it's contents
+        description: Provides additional context to the buyer about the catalog  and it's contents
         type: string
-    fulfillment_modes: 
-        type: array
-        items:
-            $ref: '../shared/base_types/FulfillmentMode.yaml'
     schedules:
-        description: Defines the availability of the products within this menu
+        description: Defines the availability of the items within this catalog
         type: array
         items: 
             $ref: './Schedule.yaml'
-    product_collections:
-        description: Defines different collections of products within this menu. Used to breakup products into useful categories (e.g. Appetizers, Desserts, etc.)
+    category_ids:
+        description: Defines different collections of items within this catalog. Used to breakup items into useful categories (e.g. Appetizers, Desserts, etc.)
         type: array
         items:
-            $ref: "./Collection.yaml"
+            $ref: "./CatalogCategory.yaml#/properties/id"
 required:
     - name
     - schedules
-    - product_collection
+    - category_ids

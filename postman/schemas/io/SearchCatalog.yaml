@@ -1,0 +1,20 @@
+title: Catalog Search Intent
+description: Represents a buyers intent to search a product or a service from a merchants catalog.
+type: object
+properties:
+  context:
+    $ref: '../schema/shared/protocol_types/Context.yaml'
+  item_search_string:
+    description: A raw free text search string describing the name or description of a <code>CatalogItem</code>
+    type: string
+  fulfillment_modes: # included in Catalog Search and Merchant Search. This is included in catalog search because certain applications might not include a merchant search.
+    type: array
+    items:
+      $ref: '../shared/protocol_types/FulfillmentMode.yaml'
+  merchant_id: 
+    oneOf:
+      - $ref: '../merchant/Merchant.yaml#/properties/id' 
+      - $ref: '../merchant/Merchant.yaml#/properties/slug'
+required:
+  - coordinates
+  - fulfillment_modes

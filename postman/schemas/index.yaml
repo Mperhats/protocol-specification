@@ -8,7 +8,7 @@ paths:
     post:
       tags:
         - Seller Supporting Node (SSN)
-      description: The BSN broadcasts the customer's request for merchants offering products or services
+      description: The <code>BSN</code> broadcasts the customer's request for merchants offering products or services
       requestBody:
         content:
           application/json:
@@ -30,7 +30,7 @@ paths:
           description: The number of items per page (optional)
       responses:
         '200':
-          description: A catalog of merchants represented by the Seller Supporting Node (SSN)
+          description: A catalog of merchants represented by the <code>Seller Supporting Node (SSN)</code>
           content:
             application/json:
               schema:
@@ -62,8 +62,8 @@ paths:
         - name: merchant_id
           description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
             <ul>
-              <li>merchant_id</li>
-              <li>slug</li>
+              <li><code>id</code></li>
+              <li><code>slug</code></li>
             </ul>
           in: path
           required: true
@@ -75,7 +75,7 @@ paths:
         summary: Find information about a specific merchant
         responses:
           '200':
-            description: A single merchant represented by the Seller Supporting Node (SSN)
+            description: A single merchant represented by the <code>Seller Supporting Node (SSN)</code>
             content:
               application/json:
                 schema:
@@ -97,64 +97,32 @@ paths:
               application/json:
                 schema:
                   $ref: './schema/shared/primitives/api/Error.yaml'
-  /search/{merchant_id}/menu:
+  /search/{merchant_id}/catalog:
     parameters:
-      - name: include_menu
-        description: Include the Menu data in the response.
-        in: query
-        schema:
-          type: boolean
-          default: true
-      - name: include_collections
-        description: Include the collections in the data response.
-        in: query
-        schema:
-          type: boolean
-          default: true
-      - name: include_products
-        description: Include the product data in the response.
-        in: query
-        schema:
-          type: boolean
-          default: true
-      - name: include_product_options
-        description: Include the product options data in the response.
-        in: query
-        schema:
-          type: boolean
-          default: true
-      - name: include_product_suboptions
-        description: Include the product suboptions data in the response.
-        in: query
-        schema:
-          type: boolean
-          default: true
       - name: merchant_id
         description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
           <ul>
-            <li>merchant_id</li>
-            <li>ethereum_address</li>
-            <li>slug</li>
+            <li><code>id</code></li>
+            <li><code>slug</code></li>
           </ul>
         in: path
         required: true
         schema:
           oneOf:
-            - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_ethereum_address'
-            - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_slug' 
-            - $ref: './schema/merchant/Merchant.yaml#/properties/merchant_id'
+            - $ref: './schema/merchant/Merchant.yaml#/properties/id'
+            - $ref: './schema/merchant/Merchant.yaml#/properties/slug' 
     get:
-      summary: Retrieves information about the merchants catalog, available items, and the affiliated prices to display to a customer of a Buyer Supporting Node (BSN)
+      summary: Retrieves information about the merchants Catalog, available CatalogItem's, and the affiliated prices to display to a customer of a Buyer Supporting Node.
       responses:
         '200':
-          description: A menu for a specific merchant
+          description: A menu for a specific <code>Merchant</code>
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   data:
-                    $ref: './schema/merchant/Menu.yaml'
+                    $ref: './schema/catalog/Catalog.yaml'
         404:
           description: No data found for the provided value
           content:

@@ -6,8 +6,7 @@ properties:
     type: string
   uri:
     description: The callback URI of the Node.
-    type: string
-    format: uri
+    $ref: ../primitives/scalars/Url.yaml
   role:
     $ref: './NetworkRole.yaml'
   public_key:
