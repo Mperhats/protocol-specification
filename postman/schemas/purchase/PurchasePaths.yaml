@@ -11,7 +11,7 @@
             $ref: './CartCreate.yaml'
     responses:
       '200':
-        description: A catalog of merchants represented by the <code>Seller Supporting Node (SSN)</code>
+        description: The new cart and terms
         content:
           application/json:
             schema:
@@ -41,7 +41,7 @@
     summary: get a cart
     responses:
       '200':
-        description: A single cart
+        description: The new cart and terms
         content:
           application/json:
             schema:
@@ -92,7 +92,7 @@
             $ref: './CartFulfillment.yaml'
     responses:
       '200':
-        description: A single cart
+        description: The new cart and terms
         content:
           application/json:
             schema:
