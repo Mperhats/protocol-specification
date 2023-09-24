@@ -326,3 +326,43 @@
           application/json:
             schema:
               $ref: '../schema/shared/primitives/api/Error.yaml'
+/cart/{cart_id}/payment_sheet:
+  parameters:
+    - name: cart_id
+      description: A unique identifier for the cart. 
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '../schema/cart/Cart.yaml#/properties/id' 
+  post:
+    summary: initialize payment
+    tags:
+      - Seller Supporting Node (SSN)
+    description: The <code>Buyer</code> selects items to add to a <code>Cart</code>
+    responses:
+      '200':
+        description: The new cart and terms
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: 
+                payment_sheet_params:
+                  $ref: './PaymentSheetParams.yaml'
+                cart:
+                  $ref: '../schema/cart/Cart.yaml' # included for ease of accessing merchant data in response body for payment sheet info on the client
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+      404:
+        description: No data found for the provided value
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
