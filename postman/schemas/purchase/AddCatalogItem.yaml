@@ -1,0 +1,31 @@
+title: Add a <code>CatalogItem</code> to a cart
+description: Represents the action of a <code>Buyer</code> to add an <code>CatalogItem</code> to a <code>Cart</code>. 
+type: object
+properties:
+  context:
+    $ref: '../schema/shared/protocol_types/Context.yaml'
+  buyer_identity:
+    type: string
+  catalog_items:
+    description: An array of <CatalogItem> <code>id</code> references.
+    type: array
+    items:
+      type: object
+      properties:
+        item_id: 
+          $ref: '../schema/catalog/CatalogItem.yaml#/properties/id'
+        quantity: 
+          type: integer
+          format: int32
+        catalog_item_modifiers: 
+          type: array
+          items:
+            type: object
+            properties:
+              modifier_item_id: 
+                $ref: '../schema/catalog/CatalogItemModifier.yaml#/properties/id'
+              quantity: 
+                type: integer
+required:
+  - context
+  - intent
