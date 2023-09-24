@@ -1,4 +1,4 @@
-/cart/add_catalog_items:
+/cart/add_catalog_item:
   post:
     summary: Add <code>CatalogItem</code>s to a <code>Cart</code>
     tags:
@@ -15,15 +15,7 @@
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                data:
-                  type: array
-                  description: an array of merchants from the Seller Supporting Node (SSN)
-                  items:
-                    $ref: '../schema/merchant/Merchant.yaml'
-                terms: 
-                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+              type: string
       404:
         description: No data found for the provided value
         content:

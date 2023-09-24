@@ -1,4 +1,4 @@
-title: Add a <code>CatalogItem</code> to a cart
+title: Add a CatalogItem to a cart
 description: Represents the action of a <code>Buyer</code> to add an <code>CatalogItem</code> to a <code>Cart</code>. 
 type: object
 properties:
@@ -28,4 +28,5 @@ properties:
                 type: integer
 required:
   - context
-  - intent
+  - buyer_identity
+  - catalog_items
