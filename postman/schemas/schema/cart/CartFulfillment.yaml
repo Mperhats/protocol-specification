@@ -3,7 +3,7 @@ type: object
 description: The options available for the fulfillment of a Cart
 properties:
   available_fulfillment_methods:
-    description: The delivery options available for this cart.
+    description: The available fulfillment methods for this cart.
     type: array
     items:
       $ref: './CartFulfillmentOption.yaml'
@@ -13,5 +13,9 @@ properties:
   selected_fulfillment_method:
     description: The currently selected fulfillment method for this cart
     $ref: './CartFulfillmentOption.yaml'
+  merchant_details:
+    $ref: './CartMerchantDetails.yaml'
 required:
-  - subtotal_amount
+  - available_fulfillment_methods
+  - customer_location
+  - selected_fulfillment_method

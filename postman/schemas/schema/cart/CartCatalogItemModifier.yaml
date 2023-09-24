@@ -1,0 +1,8 @@
+title: Cart Catalog Item Modifier
+type: object
+properties:
+  modifier_item_id: 
+    $ref: '../catalog/CatalogItemModifier.yaml#/properties/id'
+  quantity: 
+    type: integer
+    format: int32

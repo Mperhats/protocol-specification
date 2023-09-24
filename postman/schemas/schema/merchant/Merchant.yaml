@@ -1,5 +1,5 @@
 title: Merchant
-type: object
+type: object 
 description: Defines details about a merchant and specifies information that a Buyer Supporting Node (BSN) can display to it's users.
 properties:
   id:

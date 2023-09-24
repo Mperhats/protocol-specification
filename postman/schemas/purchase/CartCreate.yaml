@@ -11,6 +11,9 @@ properties:
     $ref: '../schema/customer/CustomerLocation.yaml'
   fulfillment_mode:
     $ref: '../schema/shared/protocol_types/FulfillmentMode.yaml'
+  note: 
+    description: A note that's associated with the cart. For example, a note for a merchant from a buyer about a specific request with their order.
+    type: string
 required:
   - context
   - buyer_identity

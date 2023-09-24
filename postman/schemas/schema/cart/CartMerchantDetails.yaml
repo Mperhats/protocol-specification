@@ -1,0 +1,17 @@
+title: Cart Merchant Details
+description: Information about the Merchant in this Cart
+type: object
+properties:
+    id:
+        $ref: '../merchant/Merchant.yaml#/properties/id'
+    name:
+        $ref: '../merchant/Merchant.yaml#/properties/name'
+    logo:
+        $ref: '../merchant/Merchant.yaml#/properties/logo'
+    description:
+        $ref: '../merchant/Merchant.yaml#/properties/description'
+required:
+    - id
+    - name
+    - logo
+    - description

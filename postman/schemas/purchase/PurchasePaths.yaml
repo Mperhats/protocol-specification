@@ -1,6 +1,6 @@
-/cart/create:
+/cart:
   post:
-    summary: Add a CatalogItem to a Cart
+    summary: create cart
     tags:
       - Seller Supporting Node (SSN)
     description: The <code>Buyer</code> selects items to add to a <code>Cart</code>
@@ -8,16 +8,264 @@
       content:
         application/json:
           schema:
-            $ref: './CreateACart.yaml'
+            $ref: './CartCreate.yaml'
     responses:
       '200':
         description: A catalog of merchants represented by the <code>Seller Supporting Node (SSN)</code>
         content:
           application/json:
             schema:
-              type: string
+              $ref: '../schema/cart/Cart.yaml'
       404:
         description: No data found for the provided value
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+/cart/{cart_id}:
+  parameters:
+    - name: cart_id
+      description: A unique identifier for the cart. 
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '../schema/cart/Cart.yaml#/properties/id' 
+  get:
+    summary: get a cart
+    responses:
+      '200':
+        description: A single cart
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: '../schema/cart/Cart.yaml'
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+      404:
+        description: No data found for the provided value
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+  delete: 
+    summary: delete a cart
+    responses:
+      '204':
+        description: The cart was successfully deleted
+      404:
+        description: No cart was found for the provided cart_id
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+  put: 
+    summary: update cart
+    description: update fulfillment mode, note, or other property
+    requestBody:
+      description: New quantity value for the item.
+      required: true
+      content:
+        application/json:
+          schema:
+            type: integer
+            description: The updated quantity value for the item.
+    responses:
+      '200':
+        description: A single cart
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: '../schema/cart/Cart.yaml'
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+      404:
+        description: No data found for the provided value
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+/cart/{cart_id}/items/{item_id}:
+  parameters:
+    - name: cart_id
+      description: A unique identifier for the cart. 
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '../schema/cart/Cart.yaml#/properties/id'  
+    - name: item_id
+      description: A unique identifier for the item within the cart. 
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '../schema/catalog/CatalogItem.yaml#/properties/id' 
+  put: 
+    summary: update item quantity
+    description: Update the quantity of a specific item in a cart
+    requestBody:
+      description: New quantity value for the item.
+      required: true
+      content:
+        application/json:
+          schema:
+            type: integer
+            description: The updated quantity value for the item.
+    responses:
+      '200':
+        description: The new cart and terms
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: '../schema/cart/Cart.yaml'
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+      404:
+        description: No data found for the provided value
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+  delete: 
+    summary: delete a cart item
+    responses:
+      '200':
+        description: The new cart and terms
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: '../schema/cart/Cart.yaml'
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+      404:
+        description: No cart was found for the provided cart_id
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+/cart/{cart_id}/items/{item_id}/modifiers/{modifier_id}:
+  parameters:
+    - name: cart_id
+      description: A unique identifier for the cart. 
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '../schema/cart/Cart.yaml#/properties/id'  
+    - name: item_id
+      description: A unique identifier for the item in the cart. 
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '../schema/catalog/CatalogItem.yaml#/properties/id' 
+    - name: modifier_id
+      description: A unique identifier for the modifier of an item in the cart. 
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '../schema/catalog/CatalogItem.yaml#/properties/id' 
+  put: 
+    summary: update modifier quantity
+    description: Update the quantity of a specific item in a cart
+    requestBody:
+      description: New quantity value for the item.
+      required: true
+      content:
+        application/json:
+          schema:
+            type: integer
+            description: The updated quantity value for the item.
+    responses:
+      '200':
+        description: The new cart and terms
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: '../schema/cart/Cart.yaml'
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+      404:
+        description: No data found for the provided value
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+  delete: 
+    summary: delete a modifier
+    responses:
+      '200':
+        description: The new cart and terms
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: '../schema/cart/Cart.yaml'
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+      404:
+        description: No cart was found for the provided cart_id
         content:
           application/json:
             schema:

@@ -6,7 +6,7 @@ info:
 security:
   - NodeAuth: []
 paths:
-  $ref: './discovery/DiscoveryPaths.yaml'
+  $ref: './purchase/PurchasePaths.yaml'
 components:
   securitySchemes:
     NodeAuth:

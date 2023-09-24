@@ -1,5 +1,5 @@
 title: Money
-description: An affiliated price of a <code>CatalogItem</code>
+description: A price associated with a product, service, or fulfillment method, or other charge associated with a transaction
 type: object
 properties:
     amount:
