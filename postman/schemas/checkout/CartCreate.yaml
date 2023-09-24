@@ -1,11 +1,14 @@
-title: Initialize a new Cart for a Buyer with a single line item
+title: Initialize a new Cart for a Buyer with at least a single <code>CatalogItem</code>
 description: Represents the action of a <code>Buyer</code> to add an <code>CatalogItem</code> to a <code>Cart</code>. 
 type: object
 properties:
   context:
     $ref: '../schema/shared/protocol_types/Context.yaml'
-  catalog_item:
-    $ref: '../schema/cart/CartCatalogItem.yaml'
+  catalog_items:
+    minItems: 1
+    type: array
+    items:
+      $ref: '../schema/cart/CartCatalogItem.yaml'
   fulfillment_data:
     $ref: './CartFulfillment.yaml'
 required:
