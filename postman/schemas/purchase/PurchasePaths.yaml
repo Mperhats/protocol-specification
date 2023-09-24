@@ -1,6 +1,6 @@
-/cart/add_catalog_item:
+/cart/create:
   post:
-    summary: Add <code>CatalogItem</code>s to a <code>Cart</code>
+    summary: Add a CatalogItem to a Cart
     tags:
       - Seller Supporting Node (SSN)
     description: The <code>Buyer</code> selects items to add to a <code>Cart</code>
@@ -8,7 +8,7 @@
       content:
         application/json:
           schema:
-            $ref: './AddCatalogItem.yaml'
+            $ref: './CreateACart.yaml'
     responses:
       '200':
         description: A catalog of merchants represented by the <code>Seller Supporting Node (SSN)</code>

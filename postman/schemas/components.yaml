@@ -111,3 +111,7 @@ CatalogItemType:
 
 Catalog: 
     $ref: './schema/catalog/Catalog.yaml'
+
+# cart
+Cart: 
+        $ref: './schema/cart/Cart.yaml'

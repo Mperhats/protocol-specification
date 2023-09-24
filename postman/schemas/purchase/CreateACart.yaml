@@ -1,0 +1,17 @@
+title: Initialize a new Cart for a Buyer with a single line item
+description: Represents the action of a <code>Buyer</code> to add an <code>CatalogItem</code> to a <code>Cart</code>. 
+type: object
+properties:
+  context:
+    $ref: '../schema/shared/protocol_types/Context.yaml'
+  catalog_item:
+    $ref: '../schema/cart/CartCatalogItem.yaml'
+  customer_location:
+    description: The locaiton of the customer
+    $ref: '../schema/customer/CustomerLocation.yaml'
+  fulfillment_mode:
+    $ref: '../schema/shared/protocol_types/FulfillmentMode.yaml'
+required:
+  - context
+  - buyer_identity
+  - catalog_item

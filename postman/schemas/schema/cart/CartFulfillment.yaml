@@ -1,0 +1,17 @@
+title: Cart Fulfillment
+type: object
+description: The options available for the fulfillment of a Cart
+properties:
+  available_fulfillment_methods:
+    description: The delivery options available for this cart.
+    type: array
+    items:
+      $ref: './CartFulfillmentOption.yaml'
+  customer_location:
+    description: The locaiton of the customer
+    $ref: '../customer/CustomerLocation.yaml'
+  selected_fulfillment_method:
+    description: The currently selected fulfillment method for this cart
+    $ref: './CartFulfillmentOption.yaml'
+required:
+  - subtotal_amount

@@ -1,0 +1,11 @@
+title: Cart Fulfillment Option
+description: An available fulfillment option for a Buyers Cart
+type: object
+properties:
+    fulfillment_mode:
+        $ref: '../shared/protocol_types/FulfillmentMode.yaml'
+    estimated_cost:
+        $ref: '../shared/primitives/Money.yaml'
+    title: 
+        description: A human-readable title for the fulfillment option
+        type: string

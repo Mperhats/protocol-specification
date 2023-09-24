@@ -1,0 +1,8 @@
+title: Customer Location
+description: Information about a customers Location
+type: object
+properties:
+    location: 
+      $ref: '../shared/primitives/Location.yaml'
+    coordinates: 
+      $ref: '../shared/primitives/Coordinates.yaml'
