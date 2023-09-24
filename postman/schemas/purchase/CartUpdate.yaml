@@ -1,16 +1,12 @@
-title: Update a Cart 
-description:  
+title: Cart Update
+description: Represents the action of a <code>Buyer</code> to update fulfillment specifications such as time, mode, and location.
 type: object
 properties:
-  context:
-    $ref: '../schema/shared/protocol_types/Context.yaml'
-  catalog_item:
-    $ref: '../schema/cart/CartCatalogItem.yaml'
-  customer_location:
-    description: The locaiton of the customer
-    $ref: '../schema/customer/CustomerLocation.yaml'
-  fulfillment_mode:
-    $ref: '../schema/shared/protocol_types/FulfillmentMode.yaml'
-  note: 
-    description: A note that's associated with the cart. For example, a note for a merchant from a buyer about a specific request with their order.
-    type: string
+    context:
+        $ref: '../schema/shared/protocol_types/Context.yaml'
+    fulfillment_data:
+        $ref: './CartFulfillment.yaml'
+required:
+    - context
+    - fulfillment_data
+        

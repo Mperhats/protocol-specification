@@ -84,16 +84,58 @@
     summary: update cart
     description: update fulfillment mode, note, or other property
     requestBody:
+      description: Represents the action of a <code>Buyer</code> to update fulfillment specifications such as time, mode, and location.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: './CartFulfillment.yaml'
+    responses:
+      '200':
+        description: A single cart
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: '../schema/cart/Cart.yaml'
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
+      404:
+        description: No data found for the provided value
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      500:
+        description: Unexpected error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+/cart/{cart_id}/add_catalog_item:
+  parameters:
+    - name: cart_id
+      description: A unique identifier for the cart. 
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '../schema/cart/Cart.yaml#/properties/id'
+  post: 
+    summary: add item to cart
+    description: Add a new item to an existing cart
+    requestBody:
       description: New quantity value for the item.
       required: true
       content:
         application/json:
           schema:
-            type: integer
-            description: The updated quantity value for the item.
+            $ref: './CartAddCartCatalogItem.yaml'
     responses:
       '200':
-        description: A single cart
+        description: The new cart and terms
         content:
           application/json:
             schema:
@@ -140,8 +182,12 @@
       content:
         application/json:
           schema:
-            type: integer
-            description: The updated quantity value for the item.
+            type: object
+            properties:
+              quantity:
+                type: integer
+                description: The updated quantity value for the item
+                format: int32
     responses:
       '200':
         description: The new cart and terms
@@ -224,8 +270,12 @@
       content:
         application/json:
           schema:
-            type: integer
-            description: The updated quantity value for the item.
+            type: object
+            properties:
+              quantity:
+                type: integer
+                description: The updated quantity value for the item
+                format: int32
     responses:
       '200':
         description: The new cart and terms

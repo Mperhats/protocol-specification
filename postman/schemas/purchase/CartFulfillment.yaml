@@ -1,0 +1,15 @@
+title: Cart Fulfillment
+description: Represents the fulfillment specifications associated with a cart such as time, mode, and location.
+type: object
+properties:
+  customer_location:
+    description: The locaiton of the customer
+    $ref: '../schema/customer/CustomerLocation.yaml'
+  fulfillment_mode:
+    $ref: '../schema/shared/protocol_types/FulfillmentMode.yaml'
+  note:
+    description: A note that's associated with the cart. For example, a note for a merchant from a buyer about a specific request with their order.
+    type: string
+required:
+  - customer_location
+  - fulfillment_mode
