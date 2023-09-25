@@ -1,4 +1,4 @@
-title: Initialize Payment
+title: Initialize Payment Intent
 description: The request body needed to Initialize a payment flow with a <code>SSN</code>
 type: object
 properties:
@@ -8,6 +8,9 @@ properties:
     cart_id:
         description: Defines an identifier for the cart that the contains the items the buyer intends to purchase.
         $ref: '../schema/cart/Cart.yaml#/properties/id' 
+    customer: 
+        $ref: '../schema/customer/Customer.yaml'
 required: 
     - term_id
     - cart_id
+    - customer

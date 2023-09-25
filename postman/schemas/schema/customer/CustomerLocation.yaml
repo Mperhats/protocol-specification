@@ -1,5 +1,5 @@
 title: Customer Location
-description: Information about a customers Location
+description: Information about a customers location
 type: object
 properties:
     location: 

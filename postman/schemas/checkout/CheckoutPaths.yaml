@@ -336,7 +336,7 @@
       content:
         application/json:
           schema:
-            $ref: './InitializePayment.yaml'
+            $ref: './PaymentIntent.yaml'
     responses:
       '200':
         description: The new cart and terms

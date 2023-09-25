@@ -1,12 +1,12 @@
-title: Cart
+title: Order
 type: object
-description: A <code>Cart</code> represents the <code>CatalogItem</code>s that a <code>Buyer</code> intends to purchase, and the estimated costs associated with the <code>Cart</code>. 
+description: A <code>Order</code> represents the <code>CatalogItem</code>s that a <code>Buyer</code> purchased.
 properties:
   id:
     type: string
     description: A globally unique ID of the <code>Cart</code>
   cost:
-    description: The costs that the buyer will pay at checkout. The costs can be estimates and are subject to change. Changes will be reflected at checkout.
+    description: The costs that the buyer paid at checkout.
     $ref: './CartCost.yaml'  
   catalog_items:
     description: An array of currently selected <code>CatalogItem</code>s in this cart.
