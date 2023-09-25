@@ -14,16 +14,15 @@ rootDirectory = postman/collections
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"postman/schemas/checkout/api.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/checkout/CartAddCartCatalogItem.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/checkout/CartCreate.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/checkout/CartUpdate.yaml","metaData":{}}
-files[] = {"path":"postman/schemas/checkout/CheckoutPaths.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/checkout/FulfillmentIntent.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/checkout/PaymentIntent.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/checkout/PaymentSheetParams.yaml","metaData":{}}
-files[] = {"path":"postman/schemas/checkout/PreparePaymentIntent.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components.yaml","metaData":{}}
-files[] = {"path":"postman/schemas/discovery/DiscoveryRoutes.yaml","metaData":{}}
+files[] = {"path":"postman/schemas/discovery/api.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/discovery/SearchCatalog.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/discovery/SearchMerchant.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/index.yaml","metaData":{}}
