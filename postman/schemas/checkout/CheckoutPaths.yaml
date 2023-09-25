@@ -326,20 +326,17 @@
           application/json:
             schema:
               $ref: '../schema/shared/primitives/api/Error.yaml'
-/cart/{cart_id}/payment_sheet:
-  parameters:
-    - name: cart_id
-      description: A unique identifier for the cart. 
-      in: path
-      required: true
-      schema:
-        oneOf:
-          - $ref: '../schema/cart/Cart.yaml#/properties/id' 
+/payment_sheet:
   post:
     summary: initialize payment
     tags:
       - Seller Supporting Node (SSN)
-    description: The <code>Buyer</code> selects items to add to a <code>Cart</code>
+    description: The <code>Buyer</code> initializes the payment flow
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: './InitializePayment.yaml'
     responses:
       '200':
         description: The new cart and terms
@@ -352,10 +349,14 @@
                   $ref: './PaymentSheetParams.yaml'
                 cart:
                   $ref: '../schema/cart/Cart.yaml' # included for ease of accessing merchant data in response body for payment sheet info on the client
-                terms: 
-                  $ref: '../schema/shared/primitives/api/Terms.yaml'
       404:
         description: No data found for the provided value
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/shared/primitives/api/Error.yaml'
+      410:
+        description: The provided terms are expired. Please call the /GET cart/:cart_id endpoint should be called to refresh the terms.
         content:
           application/json:
             schema:
