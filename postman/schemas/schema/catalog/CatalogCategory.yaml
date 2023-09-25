@@ -22,3 +22,7 @@ properties:
         type: array
         items:
             $ref: './CatalogItem.yaml#/properties/id'
+    ordinal: 
+        description: Determines where this <code>CatalogCategory></code> appears in the <code>Catalog</code>
+        type: integer
+        format: int32
