@@ -1,0 +1,39 @@
+title: Create Delivery Quote
+description: Represents a buyers intent to avail a delivery. 
+type: object
+properties:
+  pickup_address:
+    required: true
+    description: The location that the delivery needs to be picked up from.
+    $ref: '../schema/delivery/Waypoint.yaml'
+  delivery_address:
+    required: true
+    description: The location that the delivery needs to be dropped off at.
+    $ref: '../schema/delivery/Waypoint.yaml'
+  delivery_time:
+      required: true
+      type: integer
+      format: int64
+      description: Unix timestamp representing the requested delivery time in local time.
+  pickup_time:
+    required: true
+    type: integer
+    format: int64
+    description: Unix timestamp representing the requested pickup time in local time.
+  delivery_deadline_time:
+      type: integer
+      format: int64
+      description: Unix timestamp representing when the order must be delivered in local time.
+  pickup_deadline_time:
+    type: integer
+    format: int64
+    description: Unix timestamp representing when the order must be picked up in local time.  
+  pickup_phone_number:
+    description: A publicly listed cell phone number for the pickup.
+    $ref: '../shared/primitives/CellPhone.yaml'
+  dropoff_phone_number:
+    description: A publicly listed cell phone number for the dropoff.
+    $ref: '../shared/primitives/CellPhone.yaml'
+  manifest_total_value: 
+    description: Total price of combined items in the lowest unit of the local currency. (e.g. cents)
+    $ref: '../shared/primitives/Money.yaml'

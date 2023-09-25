@@ -4,12 +4,13 @@ type: object
 properties:
     id: 
         description: a unique identifer for the <code>SSN</code> terms. Terms are returned when <code>Cart</code>'s are modified. The <code>BSN</code> uses this identifier when establishing a payment intent with an <code>SSN</code>
+        type: string
     payment_term: 
         $ref: './terms/PaymentTerm.yaml'
     cancellation_term:
         $ref: './terms/CancellationTerm.yaml'
     refund_term:
-        $ref: './terms/CancellationTerm.yaml'
+        $ref: './terms/RefundTerm.yaml'
     expiration_date: 
         type: integer
         format: int64

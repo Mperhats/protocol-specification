@@ -2,11 +2,7 @@ title: Add <code>CatalogItem</code> to a <code>Cart</code>
 description: Represents the action of a <code>Buyer</code> to add an <code>CatalogItem</code> to an existing <code>Cart</code>. 
 type: object
 properties:
-  context:
-    $ref: '../schema/shared/protocol_types/Context.yaml'
   catalog_item:
     $ref: '../schema/cart/CartCatalogItem.yaml'
 required:
-  - context
-  - fulfillment_data
   - catalog_item

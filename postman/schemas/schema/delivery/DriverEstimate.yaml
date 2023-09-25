@@ -1,8 +1,0 @@
-title: Delivery estimate
-description: Defines the estimated fees and times associated with an availabile delivery
-type: array
-items:
-  type: object
-  properties:
-    fee:
-      $ref: '../shared/primitives/Fee.yaml'
