@@ -3,5 +3,5 @@ description: Defines payment settlement term between the Buyer Supporting Node (
 type: object
 properties:
     processed_at:
-    description: The state of an Order when the payment is officially processed.
-    $ref: "../../FulfillmentStatus.yaml"
+        description: The state of an Order when the payment is officially processed.
+        $ref: "../../FulfillmentStatus.yaml"
