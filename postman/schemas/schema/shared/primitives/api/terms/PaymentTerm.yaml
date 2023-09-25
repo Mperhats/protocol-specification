@@ -2,9 +2,6 @@ title: Payment Term
 description: Defines payment settlement term between the Buyer Supporting Node (BSN) and the Seller Supporting Node (SSN)
 type: object
 properties:
-  id:
-    description: Identifier of the payment term. This id should be created by the BSN on the initial request and stored by both parties
-    type: string
-  processed_at:
+    processed_at:
     description: The state of an Order when the payment is officially processed.
     $ref: "../../FulfillmentStatus.yaml"
