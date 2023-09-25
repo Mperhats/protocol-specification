@@ -1,5 +1,5 @@
-title: Catalog Search Intent
-description: Represents a buyers intent to search a product or a service from a merchants catalog.
+title: Driver Search Intent
+description: Represents a buyers intent to avail a delivery.
 type: object
 properties:
   context:

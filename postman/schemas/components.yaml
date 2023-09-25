@@ -9,9 +9,6 @@ ProviderType:
 Node: 
     $ref: './schema/shared/protocol_types/Node.yaml'
 
-Context: 
-    $ref: './schema/shared/protocol_types/Context.yaml'
-
 NetworkRole: 
     $ref: './schema/shared/protocol_types/NetworkRole.yaml'
 
@@ -55,16 +52,12 @@ Error:
 PaymentTerm: 
     $ref: './schema/shared/primitives/api/terms/PaymentTerm.yaml'
 
-FulfillmentTerm: 
-    $ref: './schema/shared/primitives/api/terms/FulfillmentTerm.yaml'
-
-
 RefundTerm: 
     $ref: './schema/shared/primitives/api/terms/RefundTerm.yaml'
 
 
-CancelationTerm: 
-    $ref: './schema/shared/primitives/api/terms/CancelationTerm.yaml'
+CancellationTerm: 
+    $ref: './schema/shared/primitives/api/terms/CancellationTerm.yaml'
 
 ## scalars
 EthereumAddress:

@@ -33,9 +33,6 @@ properties:
         type: array
         items:
         $ref: '../shared/protocol_types/FulfillmentMode.yaml'
-    contains_alcohol:
-        description: A boolean representing whether or not this item contains alcohol. Important for tax and legal considerations.
-        type: boolean
     images: 
         type: array
         items: 

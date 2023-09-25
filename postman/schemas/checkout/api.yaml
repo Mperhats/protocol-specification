@@ -15,7 +15,12 @@
         content:
           application/json:
             schema:
-              $ref: '../schema/cart/Cart.yaml'
+              type: object
+              properties:
+                data:
+                  $ref: '../schema/cart/Cart.yaml'
+                terms: 
+                  $ref: '../schema/shared/primitives/api/Terms.yaml'
       404:
         description: No data found for the provided value
         content:
@@ -89,7 +94,7 @@
       content:
         application/json:
           schema:
-            $ref: './CartFulfillment.yaml'
+            $ref: './CartUpdate.yaml'
     responses:
       '200':
         description: The new cart and terms

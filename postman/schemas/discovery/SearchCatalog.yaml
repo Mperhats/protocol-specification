@@ -2,8 +2,6 @@ title: Catalog Search Intent
 description: Represents a buyers intent to search a product or a service from a merchants catalog.
 type: object
 properties:
-  context:
-    $ref: '../schema/shared/protocol_types/Context.yaml'
   intent:
     description: A buyers intent to avail specific products or services from a merchant catalog
     type: object

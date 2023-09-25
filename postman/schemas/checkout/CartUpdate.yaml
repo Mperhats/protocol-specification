@@ -2,8 +2,6 @@ title: Cart Update
 description: Represents the action of a <code>Buyer</code> to update fulfillment specifications such as time, mode, and location.
 type: object
 properties:
-    context:
-        $ref: '../schema/shared/protocol_types/Context.yaml'
     fulfillment_intent:
         $ref: './FulfillmentIntent.yaml'
 required:

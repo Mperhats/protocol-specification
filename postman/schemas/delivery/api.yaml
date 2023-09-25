@@ -1,6 +1,6 @@
 /delivery/search:
-  post:
-    summary: search drivers
+  get:
+    summary: search delivery options
     tags:
       - Seller Supporting Node (SSN)
     description: The <code>BSN</code> broadcasts the customer's request for merchants offering products or services

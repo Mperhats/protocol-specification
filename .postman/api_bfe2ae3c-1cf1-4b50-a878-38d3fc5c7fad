@@ -69,7 +69,6 @@ files[] = {"path":"postman/schemas/schema/shared/primitives/MerchantCategoryCode
 files[] = {"path":"postman/schemas/schema/shared/primitives/Money.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/schema/shared/primitives/scalars/EthereumAddress.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/schema/shared/primitives/scalars/Url.yaml","metaData":{}}
-files[] = {"path":"postman/schemas/schema/shared/protocol_types/Context.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/schema/shared/protocol_types/FulfillmentMode.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/schema/shared/protocol_types/NetworkRole.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/schema/shared/protocol_types/Node.yaml","metaData":{}}

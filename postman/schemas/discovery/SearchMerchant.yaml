@@ -2,8 +2,6 @@ title: Merchant Search
 description: Required search parameters for a Buyer Supporting Node (BSN) to query a Seller Supporting Node (SSN)
 type: object
 properties:
-  context:
-    $ref: '../schema/shared/protocol_types/Context.yaml'
   intent:
     description: Represents a buyers intent to purchase a product or a service from a merchant.
     type: object
