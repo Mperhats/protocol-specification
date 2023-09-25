@@ -9,8 +9,8 @@ properties:
     type: array
     items:
       $ref: '../schema/cart/CartCatalogItem.yaml'
-  fulfillment_data:
-    $ref: './CartFulfillment.yaml'
+  fulfillment_intent:
+    $ref: './FulfillmentIntent.yaml'
 required:
   - context
   - fulfillment_data

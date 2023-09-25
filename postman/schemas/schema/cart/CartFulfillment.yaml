@@ -12,6 +12,9 @@ properties:
     $ref: './CartFulfillmentOption.yaml'
   merchant_details:
     $ref: './CartMerchantDetails.yaml' # included for ease of display by BSN client.
+  customer_address:
+    description: The location of the customer
+    $ref: '../customer/CustomerLocation.yaml'
   fulfillment_time: 
     type: integer
     format: int64

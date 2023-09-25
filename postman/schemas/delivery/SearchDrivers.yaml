@@ -1,0 +1,24 @@
+title: Catalog Search Intent
+description: Represents a buyers intent to search a product or a service from a merchants catalog.
+type: object
+properties:
+  context:
+    $ref: '../schema/shared/protocol_types/Context.yaml'
+  intent:
+    type: object
+    description: Defines relevant information about the contents of the delivery 
+    properties:
+      journey:
+        description: An array of points along the couriers journey
+        type: array
+        items:
+          $ref: '../schema/delivery/Waypoint.yaml'
+      deliverable_object: 
+        type: string
+        enum: 
+          - SMALL_OBJECT
+          - MANY_OBJECTS
+          - PERSON
+required:
+  - context
+  - intent

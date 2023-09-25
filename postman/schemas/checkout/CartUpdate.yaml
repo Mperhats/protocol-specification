@@ -4,8 +4,8 @@ type: object
 properties:
     context:
         $ref: '../schema/shared/protocol_types/Context.yaml'
-    fulfillment_data:
-        $ref: './CartFulfillment.yaml'
+    fulfillment_intent:
+        $ref: './FulfillmentIntent.yaml'
 required:
     - context
     - fulfillment_data
