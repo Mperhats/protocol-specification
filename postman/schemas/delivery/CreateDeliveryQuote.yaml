@@ -20,6 +20,10 @@ properties:
     type: integer
     format: int64
     description: Unix timestamp representing the requested pickup time in local time.
+  total_objects_value:
+    required: true
+    description: Total price of combined items in the lowest unit of the local currency. (e.g. cents)
+    $ref: '../shared/primitives/Money.yaml'
   delivery_deadline_time:
       type: integer
       format: int64
@@ -34,6 +38,3 @@ properties:
   dropoff_phone_number:
     description: A publicly listed cell phone number for the dropoff.
     $ref: '../shared/primitives/CellPhone.yaml'
-  manifest_total_value: 
-    description: Total price of combined items in the lowest unit of the local currency. (e.g. cents)
-    $ref: '../shared/primitives/Money.yaml'

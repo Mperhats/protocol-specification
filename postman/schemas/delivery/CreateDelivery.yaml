@@ -1,7 +1,15 @@
 title: Create Delivery
-description: Represents a buyers intent to avail a delivery. 
+description: Creates a delivery between two addresses 
 type: object
 properties:
+  pickup_name: 
+    required: true
+    description: A human-readable designation of the location where the courier will make the pickup. (e.g. a Restaurant name) 
+    type: string
+  dropoff_name: 
+    required: true
+    description: A human-readable designation of the location where the courier will make the dropoff. (e.g. A person or businesses name) 
+    type: string
   pickup_address:
     required: true
     description: The location that the delivery needs to be picked up from.
@@ -21,11 +29,39 @@ properties:
     format: int64
     description: Unix timestamp representing the requested pickup time in local time.
   pickup_phone_number:
+    required: true
     description: A publicly listed cell phone number for the pickup.
     $ref: '../shared/primitives/CellPhone.yaml'
   dropoff_phone_number:
+    required: true
     description: A publicly listed cell phone number for the dropoff.
     $ref: '../shared/primitives/CellPhone.yaml'
+  delivery_items:
+     required: true
+     type: array
+     minItems: 1
+     items:
+      $ref: '../shared/delivery/DeliveryItem.yaml'
+  multiple_people_required:
+    description: Defines whether the particular order requires more than a single individual to complete the task.
+    type: boolean
+  pickup_notes: 
+    type: string
+    description: Additional instructions for the courier at the pickup location. Max 280 characters.
+    maxLength: 280
+  delivery_notes: 
+    type: string
+    description: Additional instructions for the courier at the dropoff location. Max 280 characters.
+    maxLength: 280
+  delivery_deadline_time:
+      type: integer
+      format: int64
+      description: Unix timestamp representing when the order must be delivered in local time.
+  pickup_deadline_time:
+    type: integer
+    format: int64
+    description: Unix timestamp representing when the order must be picked up in local time.  
   manifest_total_value: 
     description: Total price of combined items in the lowest unit of the local currency. (e.g. cents)
     $ref: '../shared/primitives/Money.yaml'
+  

@@ -14,6 +14,8 @@ properties:
         description: The item's description. This is a searchable attribute for use in applicable query filters.
         type: string
         maxLength: 4096
+    physical_attributes:
+        $ref: '../shared/primitives/PhysicalAttributes.yaml'
     product_type:
         $ref: './CatalogItemType.yaml'
     product_price:

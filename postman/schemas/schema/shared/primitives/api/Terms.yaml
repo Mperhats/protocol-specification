@@ -11,11 +11,6 @@ properties:
         $ref: './terms/CancellationTerm.yaml'
     refund_term:
         $ref: './terms/RefundTerm.yaml'
-    expiration_date: 
-        type: integer
-        format: int64
-        minimum: -1
-        description: Unix timestamp in seconds representing when the terms expire. A value of -1 suggests that this response is not cacheable. 
 required:
     - payment_term
     - expiration_date

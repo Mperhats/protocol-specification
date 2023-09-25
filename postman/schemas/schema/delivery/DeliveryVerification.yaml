@@ -1,0 +1,7 @@
+title: Delivery Verification
+description: Defines whether a signature must be collected from an entity at a waypoint during a couriers journey.
+type: object
+properties: 
+    signature_requirement: 
+        $ref: './DeliverySignatureRequirement.yaml'
+     
