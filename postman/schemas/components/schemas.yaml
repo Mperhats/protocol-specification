@@ -137,6 +137,9 @@ CartCost:
 CartId:
     $ref: './schemas/Cart.yaml#/properties/id'
 
+CartCatalogItemModifierId:
+    $ref: './schemas/CartCatalogItemModifier.yaml#/properties/id'
+
 # customer
 Customer:
     $ref: './schemas/Customer.yaml'

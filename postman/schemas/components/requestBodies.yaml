@@ -11,3 +11,10 @@ CreateCart:
 
 UpdateCart:
     $ref: './requestBodies/UpdateCart.yaml'
+
+AddCartItem:
+    $ref: './requestBodies/AddCartItem.yaml'
+
+UpdateCartItem:
+    $ref: './requestBodies/UpdateCartItem.yaml'
+

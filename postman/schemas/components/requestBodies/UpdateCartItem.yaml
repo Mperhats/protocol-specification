@@ -1,0 +1,15 @@
+  description: new selections for this item
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          quantity:
+            type: integer
+            description: The updated quantity value for the item
+            format: int32
+          catalog_item_modifier_ids: 
+            type: array
+            items:
+              $ref: '#/components/schemas/CatalogItemModifierId'

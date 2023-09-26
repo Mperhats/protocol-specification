@@ -1,11 +1,9 @@
-summary: update cart
+summary: update item quantity
 tags:
   - Seller Supporting Node (SSN)
-description: update fulfillment mode, note, or other property
+description: Update the quantity of a specific item in a cart
 requestBody:
-  description: Represents the action of a <code>Buyer</code> to update fulfillment specifications such as time, mode, and location.
-  required: true
-  $ref: '#/components/requestBodies/UpdateCart'
+  $ref: '#/components/requestBodies/UpdateCartItem'
 responses:
   '200':
     $ref: '#/components/responses/NewCart'

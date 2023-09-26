@@ -2,7 +2,10 @@ title: Cart Catalog Item Modifier
 type: object
 properties:
   modifier_item_id: 
-    $ref: '../catalog/CatalogItemModifier.yaml#/properties/id'
+    $ref: '#/components/schemas/CartCatalogItemModifierId'
   quantity: 
     type: integer
     format: int32
+
+    # need to make the cart catalog item have an array of these.
+    # need to have update method also update these new selections instead of modifier specific endpoints.

@@ -6,7 +6,7 @@ requestBody:
   $ref: '#/components/requestBodies/CreateCart'
 responses:
   '200':
-    $ref: '#/components/responses/CreateCart'
+    $ref: '#/components/responses/NewCart'
   404:
     description: No data found for the provided value
     content:

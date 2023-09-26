@@ -1,0 +1,11 @@
+content:
+  application/json:
+    schema:
+      description: Represents the action of a <code>Buyer</code> to add an <code>CatalogItem</code> to a <code>Cart</code>. 
+      type: object
+      properties:
+        catalog_items:
+          minItems: 1
+          type: array
+          items:
+            $ref: '#/components/schemas/CartCatalogItem'

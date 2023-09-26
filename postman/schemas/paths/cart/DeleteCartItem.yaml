@@ -1,18 +1,20 @@
-summary: get a cart
+summary: delete a cart item
 tags:
   - Seller Supporting Node (SSN)
 responses:
   '200':
     $ref: '#/components/responses/NewCart'
+  '204':
+    description: The cart is now empty
   404:
     description: No data found for the provided value
     content:
       application/json:
         schema:
-          $ref: '#/components/schemas/Error'
+          $ref: '#/components/schemas/Error.yaml'
   500:
     description: Unexpected error
     content:
       application/json:
         schema:
-          $ref: '#/components/schemas/Error'
+          $ref: '#/components/schemas/Error.yaml'

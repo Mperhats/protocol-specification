@@ -1,11 +1,9 @@
-summary: update cart
+summary: add item to cart
 tags:
   - Seller Supporting Node (SSN)
-description: update fulfillment mode, note, or other property
+description: Add a new item to an existing cart
 requestBody:
-  description: Represents the action of a <code>Buyer</code> to update fulfillment specifications such as time, mode, and location.
-  required: true
-  $ref: '#/components/requestBodies/UpdateCart'
+  $ref: '#/components/requestBodies/AddCartItem'
 responses:
   '200':
     $ref: '#/components/responses/NewCart'

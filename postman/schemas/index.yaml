@@ -38,6 +38,20 @@ paths:
       $ref: './paths/cart/UpdateCart.yaml'
     delete:
       $ref: './paths/cart/DeleteCart.yaml'
+  /cart/{cart_id}/items:
+    parameters:
+      - $ref: '#/components/parameters/CartIdPathParam'
+    post:
+      $ref: './paths/cart/AddCartItem.yaml'
+  /cart/{cart_id}/items/{item_id}:
+    parameters:
+        - $ref: '#/components/parameters/CartIdPathParam'
+        - $ref: '#/components/parameters/CatalogItemIdPathParam'
+    put: 
+      $ref: './paths/cart/UpdateCartItem.yaml'
+    delete:
+       $ref: './paths/cart/DeleteCartItem.yaml'
+
 components:
   securitySchemes:
     $ref: './components/securitySchemes.yaml'

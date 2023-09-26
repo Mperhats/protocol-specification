@@ -12,8 +12,5 @@ GetItemModifiers:
     $ref: './responses/GetItemModifiers.yaml'
 
 # cart
-CreateCart:
-    $ref: './responses/CreateCart.yaml'
-
-UpdateCart:
-    $ref: './responses/UpdateCart.yaml'
+NewCart:
+    $ref: './responses/NewCart.yaml'
