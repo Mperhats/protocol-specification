@@ -6,11 +6,13 @@ properties:
         description: a unique identifer for the <code>SSN</code> terms. Terms are returned when <code>Cart</code>'s are modified. The <code>BSN</code> uses this identifier when establishing a payment intent with an <code>SSN</code>
         type: string
     payment_term: 
-        $ref: '#/components/schema/PaymentTerm'
+        $ref: '#/components/schemas/PaymentTerm'
     cancellation_term:
-        $ref: '#/components/schema/CancellationTerm'
+        $ref: '#/components/schemas/CancellationTerm'
     refund_term:
-        $ref: '#/components/schema/RefundTerm'
+        $ref: '#/components/schemas/RefundTerm'
 required:
     - payment_term
+    - cancellation_term
+    - refund_term
     - expiration_date

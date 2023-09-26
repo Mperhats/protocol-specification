@@ -8,7 +8,7 @@ content:
           minItems: 1
           type: array
           items:
-            $ref: '#/components/schema/CartCatlogItem'
+            $ref: '#/components/schemas/CartCatlogItem'
         fulfillment_intent:
           description: Represents the fulfillment intentions associated with a cart on behalf of the customer such as time, mode, and location.
           type: object

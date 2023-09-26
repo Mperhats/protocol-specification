@@ -35,15 +35,6 @@ Coordinates:
 CellPhone: 
     $ref: './schemas/primitives/CellPhone.yaml'
 
-Terms: 
-    $ref: './schemas/primitives/Terms.yaml'
-
-Pagination: 
-    $ref: './schemas/primitives/Pagination.yaml'
-
-Error: 
-    $ref: './schemas/primitives/Error.yaml'
-
 PaymentTerm: 
     $ref: './schemas/primitives/PaymentTerm.yaml'
 
@@ -52,6 +43,15 @@ RefundTerm:
 
 CancellationTerm: 
     $ref: './schemas/primitives/CancellationTerm.yaml'
+
+Terms: 
+    $ref: './schemas/primitives/Terms.yaml'
+
+Pagination: 
+    $ref: './schemas/primitives/Pagination.yaml'
+
+Error: 
+    $ref: './schemas/primitives/Error.yaml'
 
 EthereumAddress:
     $ref: './schemas/primitives/EthereumAddress.yaml'
