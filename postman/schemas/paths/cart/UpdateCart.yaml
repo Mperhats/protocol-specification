@@ -1,34 +1,23 @@
-put: 
 summary: update cart
+tags:
+  - Seller Supporting Node (SSN)
 description: update fulfillment mode, note, or other property
 requestBody:
   description: Represents the action of a <code>Buyer</code> to update fulfillment specifications such as time, mode, and location.
   required: true
-  content:
-    application/json:
-      schema:
-        $ref: './CartUpdate.yaml'
+  $ref: '#/components/requestBodies/UpdateCart'
 responses:
   '200':
-    description: The new cart and terms
-    content:
-      application/json:
-        schema:
-          type: object
-          properties:
-            data:
-              $ref: '../schema/cart/Cart.yaml'
-            terms: 
-              $ref: '../schema/shared/primitives/api/Terms.yaml'
+    $ref: '#/components/responses/UpdateCart'
   404:
     description: No data found for the provided value
     content:
       application/json:
         schema:
-          $ref: '../schema/shared/primitives/api/Error.yaml'
+          $ref: '#/components/schemas/Error'
   500:
     description: Unexpected error
     content:
       application/json:
         schema:
-          $ref: '../schema/shared/primitives/api/Error.yaml'
+          $ref: '#/components/schemas/Error'

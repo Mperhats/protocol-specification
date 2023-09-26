@@ -9,17 +9,35 @@ security:
   - NodeAuth: []
 paths:
   /merchant:
-    $ref: './paths/merchant/GetMerchants.yaml'
+    post:
+      $ref: './paths/merchant/GetMerchants.yaml'
   /merchant/{merchant_id}:
-    $ref: './paths/merchant/GetMerchant.yaml'
+    parameters:
+      - $ref: '#/components/parameters/MerchantIdPathParam'
+    get:
+      $ref: './paths/merchant/GetMerchant.yaml'
   /catalog/{merchant_id}/search:
-    $ref: './paths/merchant/GetMerchantCatalog.yaml'
+    parameters:
+      - $ref: '#/components/parameters/MerchantIdPathParam'
+    post:
+      $ref: './paths/merchant/GetMerchantCatalog.yaml'
   /item/{item_id}/modifiers:
-    $ref: './paths/merchant/GetItemModifiers.yaml'
+    parameters:
+      - $ref: '#/components/parameters/CatalogItemIdPathParam'
+    get:
+      $ref: './paths/merchant/GetItemModifiers.yaml'
   /cart:
-    $ref: './paths/cart/CreateCart.yaml'
+    post:
+      $ref: './paths/cart/CreateCart.yaml'
   /cart/{cart_id}:
-    $ref: './paths/cart/GetCart.yaml'
+    parameters:
+      - $ref: '#/components/parameters/CartIdPathParam'
+    get:
+      $ref: './paths/cart/GetCart.yaml'
+    put:
+      $ref: './paths/cart/UpdateCart.yaml'
+    delete:
+      $ref: './paths/cart/DeleteCart.yaml'
 components:
   securitySchemes:
     $ref: './components/securitySchemes.yaml'

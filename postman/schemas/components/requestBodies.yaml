@@ -8,3 +8,6 @@ GetMerchantCatalog:
 # cart
 CreateCart:
     $ref: './requestBodies/CreateCart.yaml'
+
+UpdateCart:
+    $ref: './requestBodies/UpdateCart.yaml'

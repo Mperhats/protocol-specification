@@ -1,17 +1,18 @@
-delete: 
 summary: delete a cart
+tags:
+  - Seller Supporting Node (SSN)
 responses:
   '204':
     description: The cart was successfully deleted
   404:
-    description: No cart was found for the provided cart_id
+    description: No data found for the provided value
     content:
       application/json:
         schema:
-          $ref: '../schema/shared/primitives/api/Error.yaml'
+          $ref: '#/components/schemas/Error.yaml'
   500:
     description: Unexpected error
     content:
       application/json:
         schema:
-          $ref: '../schema/shared/primitives/api/Error.yaml'
+          $ref: '#/components/schemas/Error.yaml'

@@ -1,22 +1,21 @@
-post:
-  summary: create cart
-  tags:
-    - Seller Supporting Node (SSN)
-  description: The <code>Buyer</code> selects items to add to a <code>Cart</code>
-  requestBody:
-    $ref: '#/components/requestBodies/CreateCart'
-  responses:
-    '200':
-      $ref: '#/components/responses/CreateCart'
-    404:
-      description: No data found for the provided value
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error.yaml'
-    500:
-      description: Unexpected error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error.yaml'
+summary: create cart
+tags:
+  - Seller Supporting Node (SSN)
+description: The <code>Buyer</code> selects items to add to a <code>Cart</code>
+requestBody:
+  $ref: '#/components/requestBodies/CreateCart'
+responses:
+  '200':
+    $ref: '#/components/responses/CreateCart'
+  404:
+    description: No data found for the provided value
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/Error'
+  500:
+    description: Unexpected error
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/Error'
