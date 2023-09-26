@@ -9,3 +9,7 @@ content:
           description: an array of merchants from the Seller Supporting Node (SSN)
           items:
             $ref: '#/components/schemas/Merchant'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        terms: 
+          $ref: '#/components/schemas/Terms'

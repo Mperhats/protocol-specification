@@ -56,6 +56,7 @@ files[] = {"path":"old/schema/delivery/IdentityRequirement.yaml","metaData":{}}
 files[] = {"path":"old/schema/delivery/Waypoint.yaml","metaData":{}}
 files[] = {"path":"old/schema/merchant/Merchant.yaml","metaData":{}}
 files[] = {"path":"old/schema/merchant/MerchantGroup.yaml","metaData":{}}
+files[] = {"path":"postman/schemas/components/parameters.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies/GetMerchants.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/responses.yaml","metaData":{}}
