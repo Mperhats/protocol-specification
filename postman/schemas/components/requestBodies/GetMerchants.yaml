@@ -13,11 +13,11 @@ content:
               type: string
             coordinates:
               description: The location coordinates where the transaction is to be fulfilled. Typically, the location of the customer. Used by the Seller Supporting Node (SSN) to filter providers.
-              $ref: '#/components/schema/Coordinates'
+              $ref: '#/components/schemas/Coordinates'
             fulfillment_modes:
               type: array
               items:
-                $ref: '#/components/schema/FulfillmentMode'
+                $ref: '#/components/schemas/FulfillmentMode'
             merchant_type:
               description: Defines the buyer's intended merchant type(s).
               type: array
