@@ -65,3 +65,12 @@ ImageFile:
 # merchant types
 Merchant:
     $ref: './schemas/Merchant.yaml'
+
+MerchantId:
+    $ref: './schemas/Merchant.yaml#/properties/id'
+
+MerchantSlug:
+    $ref: './schemas/Merchant.yaml#/properties/slug'
+
+
+

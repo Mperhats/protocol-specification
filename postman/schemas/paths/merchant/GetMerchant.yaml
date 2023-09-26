@@ -1,0 +1,39 @@
+parameters:
+  - name: merchant_id
+    description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
+      <ul>
+        <li><code>id</code></li>
+        <li><code>slug</code></li>
+      </ul>
+    in: path
+    required: true
+    schema:
+      oneOf:
+        - $ref: '#/components/schemas/MerchantId' 
+        - $ref: '#/components/schemas/MerchantSlug' 
+get:
+  summary: get a merchant
+  responses:
+    '200':
+      description: A single merchant represented by the <code>Seller Supporting Node (SSN)</code>
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              merchant:
+                $ref: '#/components/schemas/Merchant'
+              terms: 
+                $ref: '#/components/schemas/Terms'
+    404:
+      description: No data found for the provided value
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error.yaml'
+    500:
+      description: Unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error.yaml'

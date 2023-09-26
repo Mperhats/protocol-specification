@@ -10,14 +10,16 @@ security:
 paths:
   /merchant:
     $ref: './paths/merchant/GetMerchants.yaml'
+  /merchant/{merchant_id}:
+    $ref: './paths/merchant/GetMerchant.yaml'
 components:
   securitySchemes:
-    $ref: './components/securitySchemes.yaml' 
+    $ref: './components/securitySchemes.yaml'
   schemas:
-    $ref: './components/schemas.yaml' 
+    $ref: './components/schemas.yaml'
   parameters: 
     $ref: './components/parameters.yaml'
   requestBodies: 
-    $ref: './components/requestBodies.yaml' 
+    $ref: './components/requestBodies.yaml'
   responses: 
-    $ref: './components/responses.yaml' 
+    $ref: './components/responses.yaml'

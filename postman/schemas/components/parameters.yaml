@@ -1,4 +1,5 @@
-paginationPageParam:
+# pagination
+PaginationPageParam:
   name: page
   in: query
   description: The page number for pagination (optional)
@@ -8,7 +9,7 @@ paginationPageParam:
     default: 10
     format: int32
       
-paginationPageOffsetParam:
+PaginationPageOffsetParam:
   name: perPage
   in: query
   schema:
