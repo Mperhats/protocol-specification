@@ -51,7 +51,6 @@ paths:
       $ref: './paths/cart/UpdateCartItem.yaml'
     delete:
        $ref: './paths/cart/DeleteCartItem.yaml'
-
 components:
   securitySchemes:
     $ref: './components/securitySchemes.yaml'
