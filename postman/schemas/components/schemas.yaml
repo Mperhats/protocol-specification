@@ -114,3 +114,38 @@ CatalogModifierGroupId:
 CatalogItemModifierId:
     $ref: './schemas/CatalogItemModifier.yaml#/properties/id'
 
+# cart
+Cart: 
+    $ref: './schemas/Cart.yaml'
+
+CartCustomerDetails:
+    $ref: './schemas/CartCustomerDetails.yaml'
+
+CartMerchantDetails:
+    $ref: './schemas/CartMerchantDetails.yaml'
+
+CartCatalogItemModifier:
+    $ref: './schemas/CartCatalogItemModifier.yaml'
+
+CartFulfillmentOption:
+    $ref: './schemas/CartFulfillmentOption.yaml'
+
+CartFulfillment:
+    $ref: './schemas/CartFulfillment.yaml'
+
+CartCatalogItem:
+    $ref: './schemas/CartCatalogItem.yaml'
+
+CartCost:
+    $ref: './schemas/CartCost.yaml'
+
+# customer
+Customer:
+    $ref: './schemas/Customer.yaml'
+
+CustomerLocation:
+    $ref: './schemas/CustomerLocation.yaml'
+
+## customer identifiers
+CustomerId:
+    $ref: './schemas/Customer.yaml#/properties/id'
