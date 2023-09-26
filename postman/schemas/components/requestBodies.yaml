@@ -1,3 +1,6 @@
 # merchant
 GetMerchants:
     $ref: './requestBodies/GetMerchants.yaml'
+
+GetMerchantCatalog:
+    $ref: './requestBodies/GetMerchantCatalog.yaml'

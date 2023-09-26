@@ -12,6 +12,10 @@ paths:
     $ref: './paths/merchant/GetMerchants.yaml'
   /merchant/{merchant_id}:
     $ref: './paths/merchant/GetMerchant.yaml'
+  /catalog/{merchant_id}/search:
+    $ref: './paths/merchant/GetMerchantCatalog.yaml'
+  /item/{item_id}/modifiers:
+    $ref: './paths/merchant/GetItemModifiers.yaml'
 components:
   securitySchemes:
     $ref: './components/securitySchemes.yaml'

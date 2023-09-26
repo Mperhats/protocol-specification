@@ -1,10 +1,10 @@
 parameters:
-  - $ref: '#/components/parameters/MerchantIdPathParam'
+  - $ref: '#/components/parameters/CatalogItemIdPathParam'
 get:
-  summary: get a merchant
+  summary: get item modifiers
   responses:
     '200':
-      $ref: '#/components/responses/GetMerchant'
+      $ref: '#/components/responses/GetItemModifiers'
     404:
       description: No data found for the provided value
       content:

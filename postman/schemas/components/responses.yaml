@@ -1,3 +1,12 @@
 # merchant
 GetMerchants:
     $ref: './responses/GetMerchants.yaml'
+
+GetMerchant:
+    $ref: './responses/GetMerchant.yaml'
+
+GetMerchantCatalog: 
+    $ref: './responses/GetMerchantCatalog.yaml'
+
+GetItemModifiers: 
+    $ref: './responses/GetItemModifiers.yaml'

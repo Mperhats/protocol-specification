@@ -4,7 +4,7 @@ content:
     schema:
       type: object
       properties:
-        data:
+        merchants:
           type: array
           description: an array of merchants from the Seller Supporting Node (SSN)
           items:

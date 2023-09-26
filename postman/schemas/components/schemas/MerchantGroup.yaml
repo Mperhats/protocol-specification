@@ -4,9 +4,9 @@ description: Defines an entity that contains a group of Merchants
 properties:
   id:
     type: string
-    description: The unique ID of the merchant in the Seller Supporting Node's (SSN) system
+    description: The unique ID of the <code>MerchantGroup</code> in the Seller Supporting Node's (SSN) system
   ethereum_address:
-    $ref: '../shared/primitives/scalars/EthereumAddress.yaml'
+    $ref: '#/components/schemas/EthereumAddress.yaml'
   business_name:
     type: string
     description: The overall name of the merchant groups business. (e.g. Wing Castle LLC.)
@@ -16,9 +16,9 @@ properties:
   country_code:
     $ref: '../shared/primitives/CountryCode.yaml'
   language_code:
-      $ref: '../shared/primitives/LanguageCode.yaml'
+      $ref: '#/components/schemas/LanguageCode.yaml'
   currency_code:
-    $ref: '../shared/primitives/CurrencyCode.yaml'
+    $ref: '#/components/schemas/CurrencyCode.yaml'
   status:
     type: string
     description: The merchant groups status

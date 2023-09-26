@@ -1,5 +1,5 @@
 # pagination
-PaginationPageParam:
+PaginationPageQueryParam:
   name: page
   in: query
   description: The page number for pagination (optional)
@@ -9,7 +9,7 @@ PaginationPageParam:
     default: 10
     format: int32
       
-PaginationPageOffsetParam:
+PaginationPageOffsetQueryParam:
   name: perPage
   in: query
   schema:
@@ -19,7 +19,7 @@ PaginationPageOffsetParam:
   description: The number of items per page (optional)
 
 # merchant
-GetMerchant:
+MerchantIdPathParam:
   name: merchant_id
   description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
     <ul>
@@ -32,3 +32,11 @@ GetMerchant:
     oneOf:
       - $ref: '#/components/schemas/MerchantId' 
       - $ref: '#/components/schemas/MerchantSlug'
+    
+CatalogItemIdPathParam:
+  name: item_id
+  description: A unique identifier for the item.
+  in: path
+  required: true
+  schema:
+    type: string

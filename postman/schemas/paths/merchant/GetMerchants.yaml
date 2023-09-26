@@ -6,8 +6,8 @@ post:
   requestBody:
     $ref: '#/components/requestBodies/GetMerchants'
   parameters:
-    - $ref: '#/components/parameters/PaginationPageParam'
-    - $ref: '#/components/parameters/PaginationPageOffsetParam'
+    - $ref: '#/components/parameters/PaginationPageQueryParam'
+    - $ref: '#/components/parameters/PaginationPageOffsetQueryParam'
   responses:
     '200':
       $ref: '#/components/responses/GetMerchants'

@@ -66,11 +66,51 @@ ImageFile:
 Merchant:
     $ref: './schemas/Merchant.yaml'
 
+## merchant identifiers
 MerchantId:
     $ref: './schemas/Merchant.yaml#/properties/id'
 
 MerchantSlug:
     $ref: './schemas/Merchant.yaml#/properties/slug'
 
+# catalog
+CatalogItemModifier: 
+    $ref: './schemas/CatalogItemModifier.yaml'
 
+CatalogItemPriceType: 
+    $ref: './schemas/CatalogItemPriceType.yaml'
+
+CatalogModifierGroup: 
+    $ref: './schemas/CatalogModifierGroup.yaml'
+
+CatalogCategory: 
+    $ref: './schemas/CatalogCategory.yaml'
+
+Schedule: 
+    $ref: './schemas/Schedule.yaml'
+
+CatalogItem: 
+    $ref: './schemas/CatalogItem.yaml'
+
+CatalogItemType: 
+    $ref: './schemas/CatalogItemType.yaml'
+
+Catalog: 
+    $ref: './schemas/Catalog.yaml'
+
+## catalog identifiers
+CatalogId:
+    $ref: './schemas/Catalog.yaml#/properties/id'
+
+CatalogCategoryId:
+    $ref: './schemas/CatalogCategory.yaml#/properties/id'
+
+CatalogItemId:
+    $ref: './schemas/CatalogItem.yaml#/properties/id'
+
+CatalogModifierGroupId:
+    $ref: './schemas/CatalogModifierGroup.yaml#/properties/id'
+
+CatalogItemModifierId:
+    $ref: './schemas/CatalogItemModifier.yaml#/properties/id'
 
