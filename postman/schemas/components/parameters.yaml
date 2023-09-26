@@ -17,3 +17,18 @@ PaginationPageOffsetParam:
     minimum: 1
     maximum: 100
   description: The number of items per page (optional)
+
+# merchant
+GetMerchant:
+  name: merchant_id
+  description: A unique identifier for the merchant. Can be one of the following unique identifiers for a merchant -
+    <ul>
+      <li><code>id</code></li>
+      <li><code>slug</code></li>
+    </ul>
+  in: path
+  required: true
+  schema:
+    oneOf:
+      - $ref: '#/components/schemas/MerchantId' 
+      - $ref: '#/components/schemas/MerchantSlug'
