@@ -92,6 +92,7 @@ files[] = {"path":"postman/schemas/components/schemas/primitives/Url.yaml","meta
 files[] = {"path":"postman/schemas/components/securitySchemes.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/index.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/merchant/GetMerchant.yaml","metaData":{}}
+files[] = {"path":"postman/schemas/paths/merchant/GetMerchantCatalog.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/merchant/GetMerchants.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
