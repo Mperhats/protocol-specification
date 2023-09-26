@@ -15,7 +15,6 @@ rootDirectory = postman/collections
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
 files[] = {"path":"old/checkout/api.yaml","metaData":{}}
-files[] = {"path":"old/checkout/FulfillmentIntent.yaml","metaData":{}}
 files[] = {"path":"old/checkout/PaymentIntent.yaml","metaData":{}}
 files[] = {"path":"old/checkout/PaymentSheetParams.yaml","metaData":{}}
 files[] = {"path":"old/delivery/api.yaml","metaData":{}}
@@ -33,11 +32,13 @@ files[] = {"path":"postman/schemas/components/parameters.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies/AddCartItem.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies/CreateCart.yaml","metaData":{}}
+files[] = {"path":"postman/schemas/components/requestBodies/CreatePaymentIntent.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies/GetMerchantCatalog.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies/GetMerchants.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies/UpdateCart.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies/UpdateCartItem.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/responses.yaml","metaData":{}}
+files[] = {"path":"postman/schemas/components/responses/CreatePaymentIntent.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/responses/GetItemModifiers.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/responses/GetMerchant.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/responses/GetMerchantCatalog.yaml","metaData":{}}
@@ -94,12 +95,14 @@ files[] = {"path":"postman/schemas/paths/cart/CreateCart.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/cart/DeleteCart.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/cart/DeleteCartItem.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/cart/GetCart.yaml","metaData":{}}
+files[] = {"path":"postman/schemas/paths/cart/GetItem.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/cart/UpdateCart.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/cart/UpdateCartItem.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/merchant/GetItemModifiers.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/merchant/GetMerchant.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/merchant/GetMerchantCatalog.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/paths/merchant/GetMerchants.yaml","metaData":{}}
+files[] = {"path":"postman/schemas/paths/payment/CreatePaymentIntent.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 rootFiles[] = postman/schemas/index.yaml

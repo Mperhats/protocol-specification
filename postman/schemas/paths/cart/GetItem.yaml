@@ -1,0 +1,18 @@
+summary: get a catalog item
+tags:
+  - Seller Supporting Node (SSN)
+responses:
+  '200':
+    $ref: '#/components/schemas/CatalogItem'
+  404:
+    description: No data found for the provided value
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/Error'
+  500:
+    description: Unexpected error
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/Error'

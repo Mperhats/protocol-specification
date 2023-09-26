@@ -21,6 +21,11 @@ paths:
       - $ref: '#/components/parameters/MerchantIdPathParam'
     post:
       $ref: './paths/merchant/GetMerchantCatalog.yaml'
+  /item/{item_id}:
+    parameters:
+      - $ref: '#/components/parameters/CatalogItemIdPathParam'
+    get:
+      $ref: './paths/cart/GetItem.yaml'
   /item/{item_id}/modifiers:
     parameters:
       - $ref: '#/components/parameters/CatalogItemIdPathParam'
@@ -51,6 +56,9 @@ paths:
       $ref: './paths/cart/UpdateCartItem.yaml'
     delete:
        $ref: './paths/cart/DeleteCartItem.yaml'
+  /payment_sheet:
+    post: 
+      $ref: './paths/payment/CreatePaymentIntent.yaml'
 components:
   securitySchemes:
     $ref: './components/securitySchemes.yaml'

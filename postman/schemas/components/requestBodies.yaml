@@ -18,3 +18,6 @@ AddCartItem:
 UpdateCartItem:
     $ref: './requestBodies/UpdateCartItem.yaml'
 
+# payment
+CreatePaymentIntent: 
+    $ref: './requestBodies/CreatePaymentIntent.yaml'

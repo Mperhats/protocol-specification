@@ -47,6 +47,10 @@ CancellationTerm:
 Terms: 
     $ref: './schemas/primitives/Terms.yaml'
 
+TermsId: 
+    $ref: './schemas/primitives/Terms.yaml#/properties/id'
+
+
 Pagination: 
     $ref: './schemas/primitives/Pagination.yaml'
 
