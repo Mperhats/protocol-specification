@@ -147,3 +147,4 @@ CustomerLocation:
 ## customer identifiers
 CustomerId:
     $ref: './schemas/Customer.yaml#/properties/id'
+

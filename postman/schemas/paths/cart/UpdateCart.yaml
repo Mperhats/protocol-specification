@@ -1,0 +1,34 @@
+put: 
+summary: update cart
+description: update fulfillment mode, note, or other property
+requestBody:
+  description: Represents the action of a <code>Buyer</code> to update fulfillment specifications such as time, mode, and location.
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: './CartUpdate.yaml'
+responses:
+  '200':
+    description: The new cart and terms
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              $ref: '../schema/cart/Cart.yaml'
+            terms: 
+              $ref: '../schema/shared/primitives/api/Terms.yaml'
+  404:
+    description: No data found for the provided value
+    content:
+      application/json:
+        schema:
+          $ref: '../schema/shared/primitives/api/Error.yaml'
+  500:
+    description: Unexpected error
+    content:
+      application/json:
+        schema:
+          $ref: '../schema/shared/primitives/api/Error.yaml'
