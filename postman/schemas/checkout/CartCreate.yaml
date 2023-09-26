@@ -1,0 +1,15 @@
+title: Initialize a new Cart for a Buyer with at least a single <code>CatalogItem</code>
+description: Represents the action of a <code>Buyer</code> to add an <code>CatalogItem</code> to a <code>Cart</code>. 
+type: object
+properties:
+  catalog_items:
+    minItems: 1
+    type: array
+    items:
+      $ref: '../schema/cart/CartCatalogItem.yaml'
+  fulfillment_intent:
+    $ref: './FulfillmentIntent.yaml'
+required:
+  - context
+  - fulfillment_data
+  - catalog_item

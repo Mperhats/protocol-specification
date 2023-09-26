@@ -2,5 +2,6 @@ title: Network Role
 description: The role of node in the network
 type: string
 enum:
-  - BSN
-  - SSN
+  - BSN # Buyer Supporting Node
+  - SSN # Seller Supporting Node
+  - GP # Gateway Provider

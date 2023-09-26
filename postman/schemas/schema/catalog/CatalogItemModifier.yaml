@@ -2,7 +2,7 @@ title: Catalog Item Modifier
 description: An item in the catalog of a <code>Merchant</code>
 type: object
 properties: 
-    id: 
+    id:  
         description: A unique identifier for this <code>CatalogItemModifier</code>
         type: string
     name: 
@@ -14,6 +14,8 @@ properties:
         description: The item's description. This is a searchable attribute for use in applicable query filters.
         type: string
         maxLength: 4096
+    physical_attributes:
+        $ref: '../shared/primitives/PhysicalAttributes.yaml'
     product_type:
         $ref: './CatalogItemType.yaml'
     product_price:

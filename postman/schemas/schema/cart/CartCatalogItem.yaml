@@ -1,0 +1,19 @@
+title: A Catalog Item in the Cart
+description: An single <CatalogItem> reference with a quantity and the <code>Buyer</code>s <code>CatalogItemModifier</code> selections.
+type: object
+properties:
+  item_id: 
+    $ref: '../catalog/CatalogItem.yaml#/properties/id'
+  quantity: 
+    type: integer
+    format: int32
+  catalog_item_modifiers: 
+    type: array
+    items:
+      $ref: './CartCatalogItemModifier.yaml'
+  note: 
+    description: represents a specific, item level note. Typically used by a Merchant to fulfill a specific request form the Customer that is not satisified within the core Catalog specificaiton.
+    type: string
+required:
+  - item_id
+  - quantity

@@ -1,14 +1,16 @@
 title: Terms
-description: Transactional terms as defined by the Seller Supporting Node (SSN)
+description: Transaction terms as defined by the Seller Supporting Node (SSN)
 type: object
 properties:
+    id: 
+        description: a unique identifer for the <code>SSN</code> terms. Terms are returned when <code>Cart</code>'s are modified. The <code>BSN</code> uses this identifier when establishing a payment intent with an <code>SSN</code>
+        type: string
     payment_term: 
         $ref: './terms/PaymentTerm.yaml'
-    expiration_date: 
-        type: integer
-        format: int64
-        minimum: -1
-        description: Unix timestamp in seconds representing when the terms expire. A value of -1 suggests that this response is not cacheable and should only be used once. 
+    cancellation_term:
+        $ref: './terms/CancellationTerm.yaml'
+    refund_term:
+        $ref: './terms/RefundTerm.yaml'
 required:
     - payment_term
     - expiration_date

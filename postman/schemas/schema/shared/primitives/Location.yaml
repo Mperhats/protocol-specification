@@ -1,5 +1,5 @@
 title: Location
-description: provides details about the physical location affiliated with a seller or service provider
+description: provides details about a physical location
 type: object
 properties: 
   addressLine1:
@@ -34,10 +34,3 @@ properties:
     type: string
   countryCode:
     $ref: './CountryCode.yaml'
-  firstName:
-    description: Optional first name when it's representing recipient.
-    type: string
-  lastName: 
-    description: Optional last name when it's representing recipient.
-    type: string
-

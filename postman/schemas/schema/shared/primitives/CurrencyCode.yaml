@@ -1,5 +1,5 @@
 title: Currency Code
 type: string
-description: The currency associated with the merchant, in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) format. For example, the currency code for US dollars is USD.
+description: A currency code in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) format. For example, the currency code for US dollars is USD.
 enum:
     - USD
