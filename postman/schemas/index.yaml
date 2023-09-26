@@ -6,7 +6,10 @@ info:
 security:
   - NodeAuth: []
 paths:
-  $ref: './checkout/api.yaml'
+  /cart:
+    $ref: './checkout/api.yaml'
+  /discover:
+    $ref: './discovery/api.yaml'
 components:
   securitySchemes:
     NodeAuth:
