@@ -1,6 +1,6 @@
 /merchant/search:
   post:
-    summary: search merchants
+    summary: get merchants
     tags:
       - Seller Supporting Node (SSN)
     description: The <code>BSN</code> broadcasts the customer's request for merchants offering products or services

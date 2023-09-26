@@ -1,0 +1,3 @@
+# merchant
+GetMerchants:
+    $ref: './responses/GetMerchants.yaml'

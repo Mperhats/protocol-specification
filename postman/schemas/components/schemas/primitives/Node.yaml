@@ -7,9 +7,9 @@ properties:
     type: string
   uri:
     description: The callback URI of the Node.
-    $ref: ../primitives/scalars/Url.yaml
+    $ref: '#/components/schema/Url'
   role:
-    $ref: './NetworkRole.yaml'
+    $ref: '#/components/schema/NetworkRole'
   public_key:
     description: The encryption public key of the buyer supporting node as defined in the registry
     type: string
@@ -18,9 +18,9 @@ properties:
     type: array
     minItems: 1
     items:
-      $ref: './FulfillmentMode.yaml'
+      $ref: '#/components/schema/FulfillmentMode'
   serviceable_region:
     type: array
     minItems: 3
     items:
-      $ref: '../primitives/Coordinates.yaml'
+      $ref: '#/components/schema/Coordinates'

@@ -1,0 +1,67 @@
+# primitive types
+FulfillmentMode: 
+    $ref: './schemas/primitives/FulfillmentMode.yaml'
+
+ProviderType: 
+    $ref: './schemas/primitives/ProviderType.yaml'
+
+Node: 
+    $ref: './schemas/primitives/Node.yaml'
+
+NetworkRole: 
+    $ref: './schemas/primitives/NetworkRole.yaml'
+
+Money: 
+    $ref: './schemas/primitives/Money.yaml'
+
+Location: 
+    $ref: './schemas/primitives/Location.yaml'
+
+MerchantCategoryCode: 
+    $ref: './schemas/primitives/MerchantCategoryCode.yaml'
+
+LanguageCode: 
+    $ref: './schemas/primitives/LanguageCode.yaml'
+
+CurrencyCode: 
+    $ref: './schemas/primitives/CurrencyCode.yaml'
+
+CountryCode: 
+    $ref: './schemas/primitives/CountryCode.yaml'
+
+Coordinates: 
+    $ref: './schemas/primitives/Coordinates.yaml'
+
+CellPhone: 
+    $ref: './schemas/primitives/CellPhone.yaml'
+
+Terms: 
+    $ref: './schemas/primitives/Terms.yaml'
+
+Pagination: 
+    $ref: './schemas/primitives/Pagination.yaml'
+
+Error: 
+    $ref: './schemas/primitives/Error.yaml'
+
+PaymentTerm: 
+    $ref: './schemas/primitives/PaymentTerm.yaml'
+
+RefundTerm: 
+    $ref: './schemas/primitives/RefundTerm.yaml'
+
+CancellationTerm: 
+    $ref: './schemas/primitives/CancellationTerm.yaml'
+
+EthereumAddress:
+    $ref: './schemas/primitives/EthereumAddress.yaml'
+
+Url:
+    $ref: './schemas/primitives/Url.yaml'
+
+ImageFile:
+    $ref: './schemas/primitives/ImageFile.yaml'
+
+# merchant types
+Merchant:
+    $ref: './schemas/Merchant.yaml'
