@@ -4,4 +4,4 @@ type: object
 properties:
     processed_at:
         description: The state of an Order when the payment is officially processed.
-        $ref: "../../FulfillmentStatus.yaml"
+        $ref: "#/components/schemas/FulfillmentStatus"

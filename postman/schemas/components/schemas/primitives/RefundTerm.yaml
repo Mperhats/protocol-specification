@@ -6,7 +6,7 @@ properties:
     description: The statuses of fulfillment during which this term is applicable.
     type: array
     items:
-      $ref: "../../FulfillmentStatus.yaml"
+      $ref: "#/components/schemas/FulfillmentStatus"
   refund_eligible:
     description: Indicates if a cancellation will result in a refund
     type: boolean

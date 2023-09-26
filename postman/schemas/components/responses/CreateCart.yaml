@@ -4,7 +4,7 @@ content:
     schema:
       type: object
       properties:
-        data:
+        cart:
           $ref: '#/components/schemas/Cart'
         terms: 
           $ref: '#/components/schemas/Terms'

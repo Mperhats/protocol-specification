@@ -12,12 +12,12 @@ properties:
         description: Defines the availability of the items within this catalog
         type: array
         items: 
-            $ref: './Schedule.yaml'
+            $ref: '#/components/schemas/Schedule'
     category_ids:
         description: Defines different collections of items within this catalog. Used to breakup items into useful categories (e.g. Appetizers, Desserts, etc.)
         type: array
         items:
-            $ref: "./CatalogCategory.yaml#/properties/id"
+            $ref: "#/components/schemas/CatalogCategoryId"
 required:
     - name
     - schedules

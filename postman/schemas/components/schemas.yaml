@@ -118,12 +118,6 @@ CatalogItemModifierId:
 Cart: 
     $ref: './schemas/Cart.yaml'
 
-CartCustomerDetails:
-    $ref: './schemas/CartCustomerDetails.yaml'
-
-CartMerchantDetails:
-    $ref: './schemas/CartMerchantDetails.yaml'
-
 CartCatalogItemModifier:
     $ref: './schemas/CartCatalogItemModifier.yaml'
 
@@ -138,6 +132,10 @@ CartCatalogItem:
 
 CartCost:
     $ref: './schemas/CartCost.yaml'
+
+## cart identifiers
+CartId:
+    $ref: './schemas/Cart.yaml#/properties/id'
 
 # customer
 Customer:

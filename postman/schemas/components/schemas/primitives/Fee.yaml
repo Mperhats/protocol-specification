@@ -12,7 +12,7 @@ properties:
     description: The chargeable amount of this <code>CartFee</code>
     type: string
   currency_code:
-    $ref: './CurrencyCode.yaml'
+    $ref: '#/components/schemas/CurrencyCode'
 required:
   - title
   - description

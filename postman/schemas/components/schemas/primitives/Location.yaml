@@ -33,4 +33,4 @@ properties:
     description: The address's postal code. For a full list of field meanings by country.
     type: string
   countryCode:
-    $ref: './CountryCode.yaml'
+    $ref: '#/components/schemas/CountryCode'

@@ -11,7 +11,7 @@ properties:
             - LARGE # You need two hands to carry it e.g. computer monitor.
             - X_LARGE # You will need to make multiple trips to/from a vehicle to transport e.g. grocery order. Specifying X_LARGE will cause dispatch to only couriers using a car or larger (no walkers/bikes/scooters/etc…).
     dimensions:
-        $ref: './Dimensions.yaml'
+        $ref: '#/components/schemas/Dimensions'
     weight:
         description: weight in centimeters (cm)
         type: integer

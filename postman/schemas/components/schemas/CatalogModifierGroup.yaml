@@ -27,9 +27,9 @@ properties:
         description: A collection of image files related to the modifier group.
         type: array
         items: 
-            $ref: '../shared/primitives/media/ImageFile.yaml'
+            $ref: '#/components/schemas/ImageFile'
     modifier_item_ids: 
         description: A list of <code>CatalogItemModifier</code>'s affiliated with this modifier group. 
         type: array
         items:
-            $ref: './CatalogItemModifier.yaml#/properties/id'
+            $ref: '#/components/schemas/CatalogItemModifierId'

@@ -6,15 +6,15 @@ properties:
     description: The available fulfillment methods for this cart.
     type: array
     items:
-      $ref: './CartFulfillmentOption.yaml'
+      $ref: '#/components/schemas/CartFulfillmentOption'
   selected_fulfillment_method:
     description: The currently selected fulfillment method for this cart
-    $ref: './CartFulfillmentOption.yaml'
+    $ref: '#/components/schemas/CartFulfillmentOption'
   merchant_details:
-    $ref: './CartMerchantDetails.yaml' # included for ease of display by BSN client.
+    $ref: '#/components/schemas/Merchant' # included for ease of display by BSN client.
   customer_address:
     description: The location of the customer
-    $ref: '../customer/CustomerLocation.yaml'
+    $ref: '#/components/schemas/CustomerLocation'
   fulfillment_time: 
     type: integer
     format: int64

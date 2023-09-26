@@ -15,11 +15,11 @@ properties:
         type: string
         maxLength: 4096
     physical_attributes:
-        $ref: '../shared/primitives/PhysicalAttributes.yaml'
+        $ref: '#/components/schemas/PhysicalAttributes'
     product_type:
-        $ref: './CatalogItemType.yaml'
+        $ref: '#/components/schemas/CatalogItemType'
     product_price:
-        $ref: '../shared/primitives/Money.yaml'
+        $ref: '#/components/schemas/Money'
     ordinal: 
         description: Determines where this <code>CatalogItem></code> appears in the <code>CatalogCategory</code>
         type: integer
@@ -34,15 +34,15 @@ properties:
     supported_fulfillment_modes: 
         type: array
         items:
-        $ref: '../shared/protocol_types/FulfillmentMode.yaml'
+        $ref: '#/components/schemas/FulfillmentMode'
     images: 
         type: array
         items: 
-            $ref: '../shared/primitives/media/ImageFile.yaml'
+            $ref: '#/components/schemas/ImageFile'
     featured_image: 
         description: Functionally equivalent to <code>images(first:1)</code>
-        $ref: '../shared/primitives/media/ImageFile.yaml'
+        $ref: '#/components/schemas/ImageFile'
     modifier_group_ids:
         type: array
         items:
-            $ref: './CatalogModifierGroup.yaml#/properties/id'
+            $ref: '#/components/schemas/CatalogModifierGroupId'

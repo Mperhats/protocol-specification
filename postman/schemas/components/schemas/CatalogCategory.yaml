@@ -16,12 +16,12 @@ properties:
     images: 
         type: array
         items: 
-            $ref: '../shared/primitives/media/ImageFile.yaml'
+            $ref: '#/components/schemas/ImageFile'
     item_ids: 
         description: A list of <code>CatalogItem</code>'s affiliated with this category
         type: array
         items:
-            $ref: './CatalogItem.yaml#/properties/id'
+            $ref: '#/components/schemas/CatalogItemId'
     ordinal: 
         description: Determines where this <code>CatalogCategory></code> appears in the <code>Catalog</code>
         type: integer

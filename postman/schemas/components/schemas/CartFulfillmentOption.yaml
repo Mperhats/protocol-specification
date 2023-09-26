@@ -6,9 +6,9 @@ properties:
         description: A human-readable title for the fulfillment option
         type: string
     fulfillment_mode:
-        $ref: '../shared/protocol_types/FulfillmentMode.yaml'
+        $ref: '#/components/schemas/FulfillmentMode'
     estimated_cost:
-        $ref: '../shared/primitives/Money.yaml'
+        $ref: '#/components/schemas/Money'
 required: 
     - title
     - fulfillment_mode

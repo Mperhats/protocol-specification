@@ -3,14 +3,14 @@ description: An single <CatalogItem> reference with a quantity and the <code>Buy
 type: object
 properties:
   item_id: 
-    $ref: '../catalog/CatalogItem.yaml#/properties/id'
+    $ref: '#/components/schemas/CatalogItemId'
   quantity: 
     type: integer
     format: int32
   catalog_item_modifiers: 
     type: array
     items:
-      $ref: './CartCatalogItemModifier.yaml'
+      $ref: '#/components/schemas/CatalogItemModifierId'
   note: 
     description: represents a specific, item level note. Typically used by a Merchant to fulfill a specific request form the Customer that is not satisified within the core Catalog specificaiton.
     type: string

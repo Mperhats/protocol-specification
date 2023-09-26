@@ -6,7 +6,7 @@ properties:
     type: string
     description: The unique ID of the <code>MerchantGroup</code> in the Seller Supporting Node's (SSN) system
   ethereum_address:
-    $ref: '#/components/schemas/EthereumAddress.yaml'
+    $ref: '#/components/schemas/EthereumAddress'
   business_name:
     type: string
     description: The overall name of the merchant groups business. (e.g. Wing Castle LLC.)
@@ -14,11 +14,11 @@ properties:
     type: string
     description: A description of the merchant group and the type of services or products they offer to the network.
   country_code:
-    $ref: '../shared/primitives/CountryCode.yaml'
+    $ref: '../shared/primitives/CountryCode'
   language_code:
-      $ref: '#/components/schemas/LanguageCode.yaml'
+      $ref: '#/components/schemas/LanguageCode'
   currency_code:
-    $ref: '#/components/schemas/CurrencyCode.yaml'
+    $ref: '#/components/schemas/CurrencyCode'
   status:
     type: string
     description: The merchant groups status

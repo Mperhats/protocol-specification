@@ -10,3 +10,7 @@ GetMerchantCatalog:
 
 GetItemModifiers: 
     $ref: './responses/GetItemModifiers.yaml'
+
+# cart
+CreateCart:
+    $ref: './responses/CreateCart.yaml'

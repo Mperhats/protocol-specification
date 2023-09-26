@@ -40,3 +40,13 @@ CatalogItemIdPathParam:
   required: true
   schema:
     type: string
+
+
+# cart
+CartIdPathParam:
+  name: cart_id
+  description: A unique identifier for the cart. 
+  in: path
+  required: true
+  schema:
+    $ref: '#/components/schemas/CartId' 

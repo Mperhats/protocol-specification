@@ -6,12 +6,12 @@ properties:
     description: The statuses of fulfillment during which this term is applicable.
     type: array
     items:
-      $ref: "../../FulfillmentStatus.yaml"
+      $ref: "#/components/schemas/FulfillmentStatus"
   reason_required:
     description: Indicates whether a reason is required to cancel the order
     type: boolean
   cancellation_fee:
-    $ref: '../../Fee.yaml'
+    $ref: '#/components/schemas/Fee'
 required:
   - fulfillment_state
   - reason_required

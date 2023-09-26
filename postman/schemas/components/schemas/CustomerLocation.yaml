@@ -3,6 +3,6 @@ description: Information about a customers location
 type: object
 properties:
     location: 
-      $ref: '../shared/primitives/Location.yaml'
+      $ref: '#/components/schemas/Location'
     coordinates: 
-      $ref: '../shared/primitives/Coordinates.yaml'
+      $ref: '#/components/schemas/Coordinates'
