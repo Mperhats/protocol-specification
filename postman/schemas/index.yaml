@@ -16,6 +16,8 @@ paths:
     $ref: './paths/merchant/GetMerchantCatalog.yaml'
   /item/{item_id}/modifiers:
     $ref: './paths/merchant/GetItemModifiers.yaml'
+  /cart:
+    $ref: './paths/cart/CreateCart.yaml'
 components:
   securitySchemes:
     $ref: './components/securitySchemes.yaml'

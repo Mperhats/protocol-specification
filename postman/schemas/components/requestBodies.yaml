@@ -4,3 +4,7 @@ GetMerchants:
 
 GetMerchantCatalog:
     $ref: './requestBodies/GetMerchantCatalog.yaml'
+
+# cart
+CreateCart:
+    $ref: './requestBodies/CreateCart.yaml'
