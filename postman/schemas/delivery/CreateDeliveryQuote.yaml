@@ -32,9 +32,3 @@ properties:
     type: integer
     format: int64
     description: Unix timestamp representing when the order must be picked up in local time.  
-  pickup_phone_number:
-    description: A publicly listed cell phone number for the pickup.
-    $ref: '../shared/primitives/CellPhone.yaml'
-  dropoff_phone_number:
-    description: A publicly listed cell phone number for the dropoff.
-    $ref: '../shared/primitives/CellPhone.yaml'

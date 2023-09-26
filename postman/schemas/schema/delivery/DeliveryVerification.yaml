@@ -4,4 +4,14 @@ type: object
 properties: 
     signature_requirement: 
         $ref: './DeliverySignatureRequirement.yaml'
-     
+    barcodes: 
+        description: Barcode values/types that must be scanned at the waypoint. Number of elements in the array is equal to the number of barcodes that must be scanned.
+        type: array
+        items: 
+            $ref: './BarcodeRequirement.yaml'
+    identification:
+        description: Identification scanning/verification requirements at a waypoint.
+        $ref: './IdentityRequirement.yaml'
+    picture: 
+        description: Flag to indicate whether a photo is mandatory at this waypoint.
+        type: boolean

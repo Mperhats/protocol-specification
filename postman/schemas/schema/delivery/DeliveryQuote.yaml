@@ -5,7 +5,7 @@ items:
   type: object
   properties:
     id: 
-      description: Id of the delivery estimate
+      description: Id of the delivery quote
       required: true
       type: string
     fee:
