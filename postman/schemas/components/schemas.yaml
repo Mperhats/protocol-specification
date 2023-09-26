@@ -14,6 +14,9 @@ NetworkRole:
 Money: 
     $ref: './schemas/primitives/Money.yaml'
 
+Fee: 
+    $ref: './schemas/primitives/Fee.yaml'
+
 Location: 
     $ref: './schemas/primitives/Location.yaml'
 
@@ -155,3 +158,20 @@ CustomerLocation:
 CustomerId:
     $ref: './schemas/Customer.yaml#/properties/id'
 
+# delivery
+IdentityRequirement:
+    $ref: './schemas/IdentityRequirement.yaml'
+BarcodeRequirement:
+    $ref: './schemas/BarcodeRequirement.yaml'
+DeliverySignatureRequirement:
+    $ref: './schemas/DeliverySignatureRequirement.yaml'
+DeliveryVerification:
+    $ref: './schemas/DeliveryVerification.yaml'
+DeliveryItem:
+    $ref: './schemas/DeliveryItem.yaml'
+DeliveryQuote:
+    $ref: './schemas/DeliveryQuote.yaml'
+DeliveryFeeComponent:
+    $ref: './schemas/DeliveryFeeComponent.yaml'
+DeliveryWaypoint:
+    $ref: './schemas/DeliveryWaypoint.yaml'

@@ -3,6 +3,6 @@ description: A point in space. Defines a specific position in a couriers journey
 type: object
 properties:
   location: 
-    $ref: '../shared/primitives/Location.yaml'
+    $ref: '#/components/schemas/Location'
   coordinates: 
-    $ref: '../shared/primitives/Coordinates.yaml'
+    $ref: '#/components/schemas/Coordinates'

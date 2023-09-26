@@ -21,3 +21,7 @@ UpdateCartItem:
 # payment
 CreatePaymentIntent: 
     $ref: './requestBodies/CreatePaymentIntent.yaml'
+
+# delivery
+CreateDeliveryQuote:
+    $ref: './requestBodies/CreateDeliveryQuote.yaml'

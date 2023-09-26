@@ -14,3 +14,7 @@ GetItemModifiers:
 # cart
 NewCart:
     $ref: './responses/NewCart.yaml'
+
+# delivery
+CreateDeliveryQuote:
+    $ref: './responses/CreateDeliveryQuote.yaml'

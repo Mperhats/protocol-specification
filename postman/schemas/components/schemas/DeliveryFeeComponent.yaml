@@ -17,4 +17,4 @@ properties:
         - SMALL_ORDER_FEE
         - FLAT_FEE
     amount: 
-      $ref: '../shared/primitives/Money.yaml'
+      $ref: '#/components/schemas/Money'

@@ -59,6 +59,9 @@ paths:
   /payment_sheet:
     post: 
       $ref: './paths/payment/CreatePaymentIntent.yaml'
+  /delivery_quote:
+    post:
+      $ref: './paths/delivery/CreateDeliveryQuote.yaml'
 components:
   securitySchemes:
     $ref: './components/securitySchemes.yaml'

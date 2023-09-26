@@ -12,4 +12,4 @@ properties:
         format: int32
     physical_attributes:
         required: true
-        $ref: '../shared/primitives/PhysicalAttributes.yaml'
+        $ref: '#/components/schemas/PhysicalAttributes'
