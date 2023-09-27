@@ -6,7 +6,7 @@ content:
             description: The catalog data for the merchant
             properties: 
                 item:
-                description: The <code>CatalogItem</code> affiliated with the <code>item_id</code> parameter in the path parameter.
+                    description: The <code>CatalogItem</code> affiliated with the
                     $ref: '#/components/schemas/CatalogItem'
                 modifier_groups:
                     type: array
