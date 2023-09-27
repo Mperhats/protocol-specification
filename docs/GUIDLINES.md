@@ -1,5 +1,5 @@
 # Contributing
-UTP is a community-driven protocol and we welcome contributors of all skill levels, backgrounds, experiences, or interests. 
+OCP is a community-driven protocol and we welcome contributors of all skill levels, backgrounds, experiences, or interests. 
 
 The internet is rooted in a philosophy of freedom and openness - a place where ideas can spread and new experiences can be built in an unrestricted way. If you share this vision, we're happy to have you here and eager to accept your contributions.
 

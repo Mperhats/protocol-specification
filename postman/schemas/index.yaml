@@ -1,7 +1,7 @@
 openapi: '3.0.0'
 info:
-  title: The Open Commerce Protocol (OCP)
-  description: transaction apis
+  title: The Universal Transaction Protocol (UTP)
+  description: transaction lifecycle specification
   version: 0.0.0
   contact:
     email: engineering@noshdelivery.io

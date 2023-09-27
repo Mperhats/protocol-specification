@@ -10,21 +10,10 @@ Developers can use OCP to build new consumer marketplace applications without ha
 - A community-curated list of OCP-related projects, core working groups, and collaborators lives [here](./docs/CONTRIBUTORS.md).
 - To make contributions to the protocol, please see our [guidlines](./docs/GUIDLINES.md).
 
-
 ## OCP - Core Specification
-Every comprehensive commercial transaction follows the same standard series of 
-order lifecycle API requests. OCP defines these as follows:
+Every commercial transaction follows the same standard series of order lifecycle API requests. This specification standardizes this lifecylce through a series of 4 stages:
 
-### Communication
-
-All communication throughout order lifecycle APIs follow the below structure:
-
-| Field      | Description |
-|------------|-------------|
-| `context`  | Contains header information used for packet switching, key lookup, and encryption |
-| `message`  | Contains information pertaining to the intended transaction |
-
-#### Discovery API
+#### Discovery APIs
 This is the stage where a Buyer searches or explores the 
 product(s) or service(s) they intend to purchase from a Seller. 
 
@@ -37,20 +26,19 @@ intended product(s) or service(s).
 The discovery process requires both a query to the registry contract and an 
 API request to at least 1 server.
 
-#### Order API 
+#### Order APIs
 This is the stage where the Buyer creates an order for the 
 selected product(s) or service(s). The Buyer selects the Item(s) and/or Offer(s)
 they plan to purchase from the Seller, establishing a direct connection with 
 an `SSN`, and broadcasting their intent to purchase.
 
-#### Fulfillment API 
+#### Fulfillment APIs
 This is the stage where the Seller processes the order, 
 packages the product(s), and, if applicable, ships them to the Buyer’s specified
 delivery address. Order fulfillment broadly represents the event when a 
-Buyer receives the Item(s) from a Seller and can, optionally, 
-be represented by a delivery.
+Buyer receives the Item(s) from a Seller.
 
-#### Post-fulfillment API
+#### Post-fulfillment APIs
 This is the stage where the Buyer receives the 
 Item(s), and inspects the Item(s). In this stage, the Buyer may provide 
 feedback, require customer support, or initiate a return/refund if 
