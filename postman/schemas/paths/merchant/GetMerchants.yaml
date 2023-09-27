@@ -10,6 +10,11 @@ parameters:
 responses:
   '200':
     $ref: '#/components/responses/GetMerchants'
+    headers:
+      X-Sample-Header:
+        description: A sample response header
+        schema:
+          type: string
   404:
     description: No data found for the provided value
     content:

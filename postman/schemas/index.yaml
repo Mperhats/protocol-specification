@@ -76,3 +76,5 @@ components:
     $ref: './components/requestBodies.yaml'
   responses: 
     $ref: './components/responses.yaml'
+  headers:
+    $ref: './components/headers.yaml'

@@ -6,6 +6,9 @@ requestBody:
   $ref: '#/components/requestBodies/CreateDelivery'
 responses:
   '200':
+    headers:
+      X-Stamp: 
+        $ref: '#/components/headers/NodeAuth'
     description: need to replace with actual schema. Using [Uber Direct](https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Delivery/paths/~1customers~1%7Bcustomer_id%7D~1deliveries/post) as reference
     content:
       application/json:

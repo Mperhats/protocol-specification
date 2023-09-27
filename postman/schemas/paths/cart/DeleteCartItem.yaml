@@ -4,6 +4,9 @@ tags:
 responses:
   '200':
     $ref: '#/components/responses/NewCart'
+    headers:
+      X-Stamp: 
+        $ref: '#/components/headers/NodeAuth'
   '204':
     description: The cart is now empty
   404:

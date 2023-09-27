@@ -14,6 +14,7 @@ rootDirectory = postman/collections
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"postman/schemas/components/headers.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/parameters.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies.yaml","metaData":{}}
 files[] = {"path":"postman/schemas/components/requestBodies/AddCartItem.yaml","metaData":{}}

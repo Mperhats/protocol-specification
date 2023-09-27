@@ -4,6 +4,9 @@ tags:
 responses:
   '200':
     $ref: '#/components/responses/GetItemModifiers'
+    headers:
+      X-Stamp: 
+        $ref: '#/components/headers/NodeAuth'
   404:
     description: No data found for the provided value
     content:
