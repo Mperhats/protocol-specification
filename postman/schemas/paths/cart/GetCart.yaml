@@ -6,7 +6,7 @@ responses:
     $ref: '#/components/responses/NewCart'
     headers:
       X-Stamp: 
-        $ref: '#/components/headers/NodeAuth'
+        $ref: '#/components/headers/X-Stamp'
   404:
     description: No data found for the provided value
     content:
