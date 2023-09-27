@@ -3,19 +3,78 @@ info:
   title: The Universal Transaction Protocol (UTP)
   description: transaction lifecycle specification
   version: 0.0.0
+  contact:
+    email: engineering@noshdelivery.io
 security:
   - NodeAuth: []
 paths:
+  /merchant:
+    post:
+      $ref: './paths/merchant/GetMerchants.yaml'
+  /merchant/{merchant_id}:
+    parameters:
+      - $ref: '#/components/parameters/MerchantIdPathParam'
+    get:
+      $ref: './paths/merchant/GetMerchant.yaml'
+  /catalog/{merchant_id}/search:
+    parameters:
+      - $ref: '#/components/parameters/MerchantIdPathParam'
+    post:
+      $ref: './paths/merchant/GetMerchantCatalog.yaml'
+  /item/{item_id}:
+    parameters:
+      - $ref: '#/components/parameters/CatalogItemIdPathParam'
+    get:
+      $ref: './paths/cart/GetItem.yaml'
+  /item/{item_id}/modifiers:
+    parameters:
+      - $ref: '#/components/parameters/CatalogItemIdPathParam'
+    get:
+      $ref: './paths/merchant/GetItemModifiers.yaml'
   /cart:
-    $ref: './checkout/api.yaml'
-  /discover:
-    $ref: './discovery/api.yaml'
+    post:
+      $ref: './paths/cart/CreateCart.yaml'
+  /cart/{cart_id}:
+    parameters:
+      - $ref: '#/components/parameters/CartIdPathParam'
+    get:
+      $ref: './paths/cart/GetCart.yaml'
+    put:
+      $ref: './paths/cart/UpdateCart.yaml'
+    delete:
+      $ref: './paths/cart/DeleteCart.yaml'
+  /cart/{cart_id}/items:
+    parameters:
+      - $ref: '#/components/parameters/CartIdPathParam'
+    post:
+      $ref: './paths/cart/AddCartItem.yaml'
+  /cart/{cart_id}/items/{item_id}:
+    parameters:
+        - $ref: '#/components/parameters/CartIdPathParam'
+        - $ref: '#/components/parameters/CatalogItemIdPathParam'
+    put: 
+      $ref: './paths/cart/UpdateCartItem.yaml'
+    delete:
+       $ref: './paths/cart/DeleteCartItem.yaml'
+  /payment_sheet:
+    post: 
+      $ref: './paths/payment/CreatePaymentIntent.yaml'
+  /delivery_quote:
+    post:
+      $ref: './paths/delivery/CreateDeliveryQuote.yaml'
+  /delivery:
+    post:
+      $ref: './paths/delivery/CreateDelivery.yaml'
 components:
   securitySchemes:
-    NodeAuth:
-      type: apiKey
-      in: header
-      name: X-Stamp
-      description: 'Signature of the request using BSN or SSN private key. <br/><br/>Format:<br/><br/><code>Authorization: Signature keyId="{node_id}|{unique_registry_id}|{algorithm}",algorithm="ed25519",created="1606970629",expires="1607030629",headers="(created) (expires) digest",signature="Base64url(signing string)"</code>'
+    $ref: './components/securitySchemes.yaml'
   schemas:
-    $ref: './components.yaml'
+    $ref: './components/schemas.yaml'
+  parameters: 
+    $ref: './components/parameters.yaml'
+  requestBodies: 
+    $ref: './components/requestBodies.yaml'
+  responses: 
+    $ref: './components/responses.yaml'
+  headers:
+    $ref: './components/headers.yaml'

@@ -1,6 +1,0 @@
-title: Customer Details
-description: Information about a customer. 
-type: object
-properties:
-    address: 
-      $ref: '../customer/Customer.yaml#/properties/address'
