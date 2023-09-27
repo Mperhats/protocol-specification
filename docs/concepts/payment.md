@@ -87,4 +87,4 @@ export default function CheckoutScreen() {
 }
 ```
 
-The `SSN` will recieve a `payment_intent.succeeded` event when the payment completes. Upon receiving this webhook, The `SSN` should send send the `BSN` a confirmation and begin fulfillment of the order. 
+The `SSN` will recieve a `payment_intent.succeeded` event when the payment completes. Upon receiving this webhook, The `SSN` should send the `BSN` a confirmation via a webhook and begin fulfillment of the order.
