@@ -5,7 +5,6 @@ properties:
     charge_type:
       description: Name of the fee component.
       type: string
-      required: true
       enum:
         - DISTANCE_FEE
         - ORDER_VALUE_FEE

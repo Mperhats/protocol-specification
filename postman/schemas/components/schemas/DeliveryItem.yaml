@@ -11,5 +11,4 @@ properties:
         type: integer
         format: int32
     physical_attributes:
-        required: true
         $ref: '#/components/schemas/PhysicalAttributes'

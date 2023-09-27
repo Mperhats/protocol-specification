@@ -1,4 +1,4 @@
-summary: search delivery options
+summary: create delivery quote
 tags:
   - Seller Supporting Node (SSN)
 description: The <code>BSN</code> broadcasts the customer's request for a delivery

@@ -25,3 +25,6 @@ CreatePaymentIntent:
 # delivery
 CreateDeliveryQuote:
     $ref: './requestBodies/CreateDeliveryQuote.yaml'
+
+CreateDelivery:
+    $ref: './requestBodies/CreateDelivery.yaml'

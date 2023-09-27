@@ -62,6 +62,9 @@ paths:
   /delivery_quote:
     post:
       $ref: './paths/delivery/CreateDeliveryQuote.yaml'
+  /delivery:
+    post:
+      $ref: './paths/delivery/CreateDelivery.yaml'
 components:
   securitySchemes:
     $ref: './components/securitySchemes.yaml'
